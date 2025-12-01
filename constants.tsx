@@ -52,24 +52,39 @@ export const SPECIALTIES: Specialty[] = [
 
 export const DOCTORS: Doctor[] = [
   {
-    name: "Dr. André Mello",
-    specialty: "Catarata e Refrativa",
-    image: "https://picsum.photos/300/400?random=10"
+    name: "Dra. Katia Mello",
+    specialty: "Catarata",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-katia-que-cabe-A85e4prWEzTLbe2p.jpg"
   },
   {
-    name: "Dra. Juliana Costa",
-    specialty: "Retina e Vítreo",
-    image: "https://picsum.photos/300/400?random=11"
+    name: "Dra. Claudia Morgado",
+    specialty: "Córnea",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/470494881_582373847728893_3199652955436485462_n-mjE792GKxacvBDPZ.jpg"
   },
   {
-    name: "Dr. Marcos Silva",
-    specialty: "Córnea e Lentes",
-    image: "https://picsum.photos/300/400?random=12"
+    name: "Dra. Adriana Franco",
+    specialty: "Retina",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-adriana-franco_-mp8Wn5DJnZuv6NE0.jpg"
   },
   {
-    name: "Dra. Carla Nunes",
-    specialty: "Oftalmopediatria",
-    image: "https://picsum.photos/300/400?random=13"
+    name: "Dra. Marceli Bastos",
+    specialty: "Oftalmologista",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-marceli-bastos_-Awv4rnakX6c9K08Z.jpg"
+  },
+  {
+    name: "Dra. Alana Reis",
+    specialty: "Glaucoma",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-alana-maggesissi_-AGB2G52gO7t2DqRW.jpg"
+  },
+  {
+    name: "Dr. Rodrigo Pegado",
+    specialty: "Retina",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-pegado-YD0lpx432bU94ZzY.jpg"
+  },
+  {
+    name: "Dr. Marcio Monteiro",
+    specialty: "Glaucoma",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-marcio-pereira-m6LZvR7bw1ipERaR.jpg"
   }
 ];
 
