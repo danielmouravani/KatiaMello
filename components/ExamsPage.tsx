@@ -24,7 +24,7 @@ const ExamsPage: React.FC<ExamsPageProps> = ({ onNavigate }) => {
   }, [searchTerm]);
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-20 animate-fade-in-up font-sans">
+    <div id="exames" className="bg-slate-50 min-h-screen pt-20 animate-fade-in-up font-sans">
       
       {/* 1. HERO SECTION COMPACTO */}
       <section className="relative bg-slate-900 text-white py-16 px-4 overflow-hidden">

@@ -46,7 +46,7 @@ const RefractivePage: React.FC<RefractivePageProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="bg-white min-h-screen pt-20 animate-fade-in-up font-sans">
+    <div id="refrativa" className="bg-white min-h-screen pt-20 animate-fade-in-up font-sans">
       
       {/* 1. HERO CONVERSÃO */}
       <section className="relative bg-slate-900 text-white overflow-hidden pb-16 pt-8 md:pt-16">

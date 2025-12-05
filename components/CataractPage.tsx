@@ -37,7 +37,7 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="bg-white min-h-screen pt-20 animate-fade-in-up font-sans">
+    <div id="catarata" className="bg-white min-h-screen pt-20 animate-fade-in-up font-sans">
       
       {/* 1. HERO CONVERSÃO: Promessa Forte + Imagem + CTA Imediato */}
       <section className="relative bg-gradient-to-b from-slate-900 to-slate-800 text-white overflow-hidden pb-16 pt-8 md:pt-16">
