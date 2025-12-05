@@ -19,9 +19,49 @@ const App: React.FC = () => {
   const [showBubble, setShowBubble] = useState(false);
   const [isBubbleClosed, setIsBubbleClosed] = useState(false);
 
+  // Mapeamento de URLs Amigáveis para Google Ads
+  // URL: /catarata -> Page: cataract
+  // URL: /refrativa -> Page: refractive
+  // URL: /exames -> Page: exams
+
+  useEffect(() => {
+    // 1. Ler a URL quando o site carrega
+    const path = window.location.pathname.toLowerCase();
+    
+    if (path.includes('/catarata') || path.includes('/cataract')) {
+      setCurrentPage('cataract');
+    } else if (path.includes('/refrativa') || path.includes('/refractive')) {
+      setCurrentPage('refractive');
+    } else if (path.includes('/exames') || path.includes('/exams')) {
+      setCurrentPage('exams');
+    } else {
+      setCurrentPage('home');
+    }
+
+    // 2. Lidar com o botão "Voltar" do navegador
+    const handlePopState = () => {
+      const newPath = window.location.pathname.toLowerCase();
+      if (newPath.includes('/catarata')) setCurrentPage('cataract');
+      else if (newPath.includes('/refrativa')) setCurrentPage('refractive');
+      else if (newPath.includes('/exames')) setCurrentPage('exams');
+      else setCurrentPage('home');
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
   const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams') => {
     setCurrentPage(page);
     window.scrollTo(0, 0);
+
+    // 3. Atualizar a URL sem recarregar a página (SPA Feeling)
+    let friendlyUrl = '/';
+    if (page === 'cataract') friendlyUrl = '/catarata';
+    if (page === 'refractive') friendlyUrl = '/refrativa';
+    if (page === 'exams') friendlyUrl = '/exames';
+
+    window.history.pushState({}, '', friendlyUrl);
   };
 
   useEffect(() => {
