@@ -4,7 +4,7 @@ import { NavItem, Specialty, Doctor, Testimonial, Stat, Partner, Lens, Exam } fr
 export const WHATSAPP_LINK = "https://wa.me/5521987445823?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "#home" },
   { label: "Catarata", href: "#catarata" },
   { label: "Refrativa", href: "#refrativa" },
   { label: "Exames", href: "#exames" },
@@ -72,9 +72,9 @@ export const DOCTORS: Doctor[] = [
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/470494881_582373847728893_3199652955436485462_n-mjE792GKxacvBDPZ.jpg"
   },
   {
-    name: "Dra. Adriana Franco",
-    specialty: "Retina",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-adriana-franco_-mp8Wn5DJnZuv6NE0.jpg"
+    name: "Dr. Rodrigo Borges",
+    specialty: "Córnea",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-borges-AGBznl628jfrE5gm.jpeg"
   },
   {
     name: "Dra. Marceli Bastos",
@@ -97,9 +97,9 @@ export const DOCTORS: Doctor[] = [
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-marcio-pereira-m6LZvR7bw1ipERaR.jpg"
   },
   {
-    name: "Dr. Rodrigo Borges",
-    specialty: "Córnea",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-borges-AGBznl628jfrE5gm.jpeg"
+    name: "Dra. Adriana Franco",
+    specialty: "Retina",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-adriana-franco_-mp8Wn5DJnZuv6NE0.jpg"
   },
   {
     name: "Dra. Julia Soares",
