@@ -18,37 +18,10 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (href: string, e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleNavClick = (href: string) => {
     setIsOpen(false);
-    
-    if (href === 'cataract') {
-      onNavigate('cataract');
-      return;
-    }
-
-    if (href === 'refractive') {
-      onNavigate('refractive');
-      return;
-    }
-
-    if (href === 'exams') {
-      onNavigate('exams');
-      return;
-    }
-    
-    // Always go to home first if not on home
-    onNavigate('home');
-    
-    // Then scroll to target if it's an anchor
-    if (href.startsWith('#')) {
-      setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
+    // Não precisamos de lógica complexa aqui. 
+    // O App.tsx detecta a mudança de hash automaticamente.
   };
 
   return (
@@ -58,9 +31,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
         : 'bg-transparent py-4 bg-gradient-to-b from-slate-900/80 to-transparent'
     }`}>
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        {/* Logo - Wrapped in white to handle non-transparent image */}
-        <button 
-          onClick={(e) => handleNavClick('#hero', e)}
+        {/* Logo */}
+        <a 
+          href="#"
           className="flex items-center gap-2 focus:outline-none"
         >
            <div className="bg-white py-1.5 px-3 rounded-lg shadow-lg shadow-black/20">
@@ -70,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
                className="h-10 w-auto object-contain"
              />
            </div>
-        </button>
+        </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
@@ -78,7 +51,6 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             <a 
               key={item.label} 
               href={item.href} 
-              onClick={(e) => handleNavClick(item.href, e)}
               className="text-sm font-medium transition-colors text-slate-300 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
             >
               {item.label}
@@ -112,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               key={item.label} 
               href={item.href} 
               className="text-slate-300 text-lg font-medium py-2 hover:text-white border-b border-slate-800/50"
-              onClick={(e) => handleNavClick(item.href, e)}
+              onClick={() => handleNavClick(item.href)}
             >
               {item.label}
             </a>

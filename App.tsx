@@ -19,54 +19,62 @@ const App: React.FC = () => {
   const [showBubble, setShowBubble] = useState(false);
   const [isBubbleClosed, setIsBubbleClosed] = useState(false);
 
-  // Mapeamento de URLs Amigáveis para Google Ads
-  // URL: /catarata -> Page: cataract
-  // URL: /refrativa -> Page: refractive
-  // URL: /exames -> Page: exams
+  // Implementação de Roteamento Baseado em Hash (#)
+  // URL: #catarata -> Page: cataract
+  // URL: #refrativa -> Page: refractive
+  // URL: #exames -> Page: exams
+  // URL: # (ou qualquer outra) -> Page: home (com scroll se houver ancora)
 
   useEffect(() => {
-    // 1. Ler a URL quando o site carrega
-    const path = window.location.pathname.toLowerCase();
-    
-    if (path.includes('/catarata') || path.includes('/cataract')) {
-      setCurrentPage('cataract');
-    } else if (path.includes('/refrativa') || path.includes('/refractive')) {
-      setCurrentPage('refractive');
-    } else if (path.includes('/exames') || path.includes('/exams')) {
-      setCurrentPage('exams');
-    } else {
-      setCurrentPage('home');
-    }
-
-    // 2. Lidar com o botão "Voltar" do navegador
-    const handlePopState = () => {
-      const newPath = window.location.pathname.toLowerCase();
-      if (newPath.includes('/catarata')) setCurrentPage('cataract');
-      else if (newPath.includes('/refrativa')) setCurrentPage('refractive');
-      else if (newPath.includes('/exames')) setCurrentPage('exams');
-      else setCurrentPage('home');
+    const handleHashChange = () => {
+      const hash = window.location.hash.toLowerCase();
+      
+      // Lógica de Roteamento de Páginas
+      if (hash === '#catarata') {
+        setCurrentPage('cataract');
+        window.scrollTo(0, 0);
+      } else if (hash === '#refrativa') {
+        setCurrentPage('refractive');
+        window.scrollTo(0, 0);
+      } else if (hash === '#exames') {
+        setCurrentPage('exams');
+        window.scrollTo(0, 0);
+      } else {
+        // Se não for uma página dedicada, assume que é Home
+        if (currentPage !== 'home') {
+          setCurrentPage('home');
+        }
+        
+        // Se for um link de âncora da home (ex: #team), faz o scroll
+        if (hash && hash !== '#home') {
+           setTimeout(() => {
+             // Pequeno delay para garantir que o componente Home montou
+             const element = document.querySelector(hash);
+             if (element) {
+               element.scrollIntoView({ behavior: 'smooth' });
+             }
+           }, 100);
+        } else {
+           // Se for apenas # ou #home, vai pro topo
+           window.scrollTo(0, 0);
+        }
+      }
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
-  }, []);
+    // Executa na carga inicial
+    handleHashChange();
+
+    // Escuta mudanças de hash (cliques em links ou botões voltar/avançar)
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, [currentPage]);
 
   const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams') => {
-    setCurrentPage(page);
-    window.scrollTo(0, 0);
-
-    // 3. Atualizar a URL sem recarregar a página (SPA Feeling)
-    let friendlyUrl = '/';
-    if (page === 'cataract') friendlyUrl = '/catarata';
-    if (page === 'refractive') friendlyUrl = '/refrativa';
-    if (page === 'exams') friendlyUrl = '/exames';
-
-    try {
-      window.history.pushState({}, '', friendlyUrl);
-    } catch (e) {
-      // Ignore security errors in sandboxed environments
-      console.warn('Navigation URL update blocked by environment:', e);
-    }
+    // Essa função agora apenas atualiza o hash, o useEffect lida com a mudança de estado
+    if (page === 'cataract') window.location.hash = 'catarata';
+    else if (page === 'refractive') window.location.hash = 'refrativa';
+    else if (page === 'exams') window.location.hash = 'exames';
+    else window.location.hash = ''; 
   };
 
   useEffect(() => {

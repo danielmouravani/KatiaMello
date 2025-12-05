@@ -6,36 +6,6 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
-  const handleNavClick = (href: string, e: React.MouseEvent) => {
-    e.preventDefault();
-    
-    if (href === 'cataract') {
-      onNavigate('cataract');
-      return;
-    }
-
-    if (href === 'refractive') {
-      onNavigate('refractive');
-      return;
-    }
-
-    if (href === 'exams') {
-      onNavigate('exams');
-      return;
-    }
-
-    onNavigate('home');
-    
-    if (href.startsWith('#')) {
-      setTimeout(() => {
-        const element = document.querySelector(href);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
-  };
-
   return (
     <footer id="footer" className="bg-slate-900 text-slate-300 pt-20 border-t border-slate-800">
       
@@ -57,12 +27,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div>
           <h4 className="text-white font-bold mb-6">Links Rápidos</h4>
           <ul className="space-y-3 text-sm">
-            <li><a href="#hero" onClick={(e) => handleNavClick('#hero', e)} className="hover:text-brand-400 transition-colors">Home</a></li>
-            <li><a href="cataract" onClick={(e) => handleNavClick('cataract', e)} className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia de Catarata</a></li>
-            <li><a href="refractive" onClick={(e) => handleNavClick('refractive', e)} className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia Refrativa</a></li>
-            <li><a href="exams" onClick={(e) => handleNavClick('exams', e)} className="hover:text-brand-400 transition-colors text-brand-300">Exames</a></li>
-            <li><a href="#specialties" onClick={(e) => handleNavClick('#specialties', e)} className="hover:text-brand-400 transition-colors">Especialidades</a></li>
-            <li><a href="#partners" onClick={(e) => handleNavClick('#partners', e)} className="hover:text-brand-400 transition-colors">Convênios</a></li>
+            <li><a href="#" className="hover:text-brand-400 transition-colors">Home</a></li>
+            <li><a href="#catarata" className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia de Catarata</a></li>
+            <li><a href="#refrativa" className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia Refrativa</a></li>
+            <li><a href="#exames" className="hover:text-brand-400 transition-colors text-brand-300">Exames</a></li>
+            <li><a href="#specialties" className="hover:text-brand-400 transition-colors">Especialidades</a></li>
+            <li><a href="#partners" className="hover:text-brand-400 transition-colors">Convênios</a></li>
           </ul>
         </div>
 

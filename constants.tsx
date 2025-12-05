@@ -4,10 +4,10 @@ import { NavItem, Specialty, Doctor, Testimonial, Stat, Partner, Lens, Exam } fr
 export const WHATSAPP_LINK = "https://wa.me/5521987445823?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Home", href: "#hero" },
-  { label: "Catarata", href: "cataract" },
-  { label: "Refrativa", href: "refractive" },
-  { label: "Exames", href: "exams" },
+  { label: "Home", href: "#" },
+  { label: "Catarata", href: "#catarata" },
+  { label: "Refrativa", href: "#refrativa" },
+  { label: "Exames", href: "#exames" },
   { label: "Sobre", href: "#stats" },
   { label: "Especialidades", href: "#specialties" },
   { label: "Corpo Clínico", href: "#team" },
@@ -61,6 +61,12 @@ export const DOCTORS: Doctor[] = [
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-katia-que-cabe-A85e4prWEzTLbe2p.jpg"
   },
   {
+    name: "Dra. Fabia Crespo",
+    specialty: "Glaucoma",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/img_5543-2-A3Q2pg8qv8TDWEv8.jpg",
+    crm: "52838446"
+  },
+  {
     name: "Dra. Claudia Morgado",
     specialty: "Córnea",
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/470494881_582373847728893_3199652955436485462_n-mjE792GKxacvBDPZ.jpg"
@@ -99,12 +105,6 @@ export const DOCTORS: Doctor[] = [
     name: "Dra. Julia Soares",
     specialty: "Córnea",
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/f97cc78b-f8ae-4c37-8832-46ade3a4b5ff-mv0P2wDJWViBZRMb.png"
-  },
-  {
-    name: "Dra. Fabia Crespo",
-    specialty: "Glaucoma",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/img_5543-2-A3Q2pg8qv8TDWEv8.jpg",
-    crm: "52838446"
   }
 ];
 
