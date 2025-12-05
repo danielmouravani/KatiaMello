@@ -3,7 +3,7 @@ import { SPECIALTIES } from '../constants';
 import { ArrowRight } from 'lucide-react';
 
 interface SpecialtiesProps {
-  onNavigate: (page: 'home' | 'cataract') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams') => void;
 }
 
 const Specialties: React.FC<SpecialtiesProps> = ({ onNavigate }) => {
@@ -43,6 +43,8 @@ const Specialties: React.FC<SpecialtiesProps> = ({ onNavigate }) => {
                     e.preventDefault();
                     if (spec.title === 'Catarata') {
                       onNavigate('cataract');
+                    } else if (spec.title === 'Cirurgia Refrativa') {
+                      onNavigate('refractive');
                     } else {
                       // Fallback for other items for now
                       console.log('Navigate to:', spec.title);

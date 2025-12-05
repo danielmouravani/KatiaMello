@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Star } from 'lucide-react';
+import { WHATSAPP_LINK } from '../constants';
 
 const Hero: React.FC = () => {
   return (
@@ -33,7 +34,9 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="https://wa.me/"
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30"
             >
               Agendar Consulta

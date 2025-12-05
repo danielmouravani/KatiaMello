@@ -2,7 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react';
 
 interface FooterProps {
-  onNavigate: (page: 'home' | 'cataract') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
@@ -11,6 +11,16 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     
     if (href === 'cataract') {
       onNavigate('cataract');
+      return;
+    }
+
+    if (href === 'refractive') {
+      onNavigate('refractive');
+      return;
+    }
+
+    if (href === 'exams') {
+      onNavigate('exams');
       return;
     }
 
@@ -48,9 +58,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <h4 className="text-white font-bold mb-6">Links Rápidos</h4>
           <ul className="space-y-3 text-sm">
             <li><a href="#hero" onClick={(e) => handleNavClick('#hero', e)} className="hover:text-brand-400 transition-colors">Home</a></li>
-            <li><a href="cataract" onClick={(e) => handleNavClick('cataract', e)} className="hover:text-brand-400 transition-colors font-semibold text-brand-300">Cirurgia de Catarata</a></li>
+            <li><a href="cataract" onClick={(e) => handleNavClick('cataract', e)} className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia de Catarata</a></li>
+            <li><a href="refractive" onClick={(e) => handleNavClick('refractive', e)} className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia Refrativa</a></li>
+            <li><a href="exams" onClick={(e) => handleNavClick('exams', e)} className="hover:text-brand-400 transition-colors text-brand-300">Exames</a></li>
             <li><a href="#specialties" onClick={(e) => handleNavClick('#specialties', e)} className="hover:text-brand-400 transition-colors">Especialidades</a></li>
-            <li><a href="#team" onClick={(e) => handleNavClick('#team', e)} className="hover:text-brand-400 transition-colors">Corpo Clínico</a></li>
             <li><a href="#partners" onClick={(e) => handleNavClick('#partners', e)} className="hover:text-brand-400 transition-colors">Convênios</a></li>
           </ul>
         </div>
@@ -60,15 +71,23 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <ul className="space-y-4 text-sm">
             <li className="flex items-start gap-3">
               <MapPin size={18} className="text-brand-500 shrink-0 mt-0.5" />
-              <span>Av. Perimetral, 123 - Centro<br />Duque de Caxias - RJ</span>
+              <span>Av Presidente Vargas, 132<br/>Edificio Fertonani<br/>Centro Duque de Caxias</span>
             </li>
-            <li className="flex items-center gap-3">
-              <Phone size={18} className="text-brand-500 shrink-0" />
-              <span>(21) 2671-0000</span>
+            <li className="flex flex-col gap-2">
+              <div className="flex items-center gap-3">
+                <Phone size={18} className="text-brand-500 shrink-0" />
+                <span>(21) 3344-7321</span>
+              </div>
+              <div className="flex items-center gap-3 pl-8">
+                <span>(21) 98744-5823</span>
+              </div>
+              <div className="flex items-center gap-3 pl-8">
+                <span>(21) 98744-5827</span>
+              </div>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-brand-500 shrink-0" />
-              <span>contato@katiamello.com.br</span>
+              <span>setoratendimento@<br/>centrokatiamello.com.br</span>
             </li>
           </ul>
         </div>

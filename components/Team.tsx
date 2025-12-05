@@ -35,9 +35,11 @@ const Team: React.FC = () => {
                 <p className="text-brand-300 text-sm font-medium mb-1">{doctor.specialty}</p>
                 <h4 className="text-white text-xl font-bold">{doctor.name}</h4>
                 <div className="h-0 group-hover:h-auto overflow-hidden transition-all duration-300">
-                   <p className="text-slate-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">
-                     CRM 12345-RJ
-                   </p>
+                   {doctor.crm && (
+                     <p className="text-slate-300 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity delay-100">
+                       CRM {doctor.crm}
+                     </p>
+                   )}
                    <button className="mt-3 text-white text-sm font-semibold hover:underline">
                      Ver perfil completo
                    </button>

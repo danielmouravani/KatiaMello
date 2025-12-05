@@ -16,6 +16,7 @@ export interface Doctor {
   name: string;
   specialty: string;
   image: string;
+  crm?: string;
 }
 
 export interface Testimonial {
@@ -44,4 +45,10 @@ export interface Lens {
   title: string;
   description: string;
   features: string[];
+}
+
+export interface Exam {
+  title: string;
+  description: string;
+  category?: string;
 }

@@ -1,9 +1,13 @@
 import { Eye, Activity, ShieldCheck, Microscope, Glasses, Users } from "lucide-react";
-import { NavItem, Specialty, Doctor, Testimonial, Stat, Partner, Lens } from "./types";
+import { NavItem, Specialty, Doctor, Testimonial, Stat, Partner, Lens, Exam } from "./types";
+
+export const WHATSAPP_LINK = "https://wa.me/5521987445823?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "#hero" },
   { label: "Catarata", href: "cataract" },
+  { label: "Refrativa", href: "refractive" },
+  { label: "Exames", href: "exams" },
   { label: "Sobre", href: "#stats" },
   { label: "Especialidades", href: "#specialties" },
   { label: "Corpo Clínico", href: "#team" },
@@ -83,8 +87,24 @@ export const DOCTORS: Doctor[] = [
   },
   {
     name: "Dr. Marcio Monteiro",
-    specialty: "Glaucoma",
+    specialty: "Oftalmologista",
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-marcio-pereira-m6LZvR7bw1ipERaR.jpg"
+  },
+  {
+    name: "Dr. Rodrigo Borges",
+    specialty: "Córnea",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-borges-AGBznl628jfrE5gm.jpeg"
+  },
+  {
+    name: "Dra. Julia Soares",
+    specialty: "Córnea",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/f97cc78b-f8ae-4c37-8832-46ade3a4b5ff-mv0P2wDJWViBZRMb.png"
+  },
+  {
+    name: "Dra. Fabia Crespo",
+    specialty: "Glaucoma",
+    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/img_5543-2-A3Q2pg8qv8TDWEv8.jpg",
+    crm: "52838446"
   }
 ];
 
@@ -194,4 +214,36 @@ export const LENSES: Lens[] = [
     description: "Foco Estendido. Proporcionam visão nítida em uma faixa contínua de distâncias. Reduzem halos noturnos, oferecendo mais conforto visual.",
     features: ["Menos halos e glare", "Contraste aprimorado", "Transição natural"]
   }
+];
+
+export const EXAMS: Exam[] = [
+  { title: "Adaptação de lentes de contato", description: "Avaliação e escolha da melhor lente de contato para cada paciente.", category: "Lentes" },
+  { title: "Avaliação ortóptica", description: "Avalia o alinhamento ocular e alterações na motilidade dos olhos.", category: "Geral" },
+  { title: "Biometria óptica", description: "Medições precisas para cálculo de lentes intraoculares e verificação de medidas oculares.", category: "Pré-Operatório" },
+  { title: "Biomicroscopia", description: "Exame detalhado das estruturas anteriores do olho.", category: "Geral" },
+  { title: "Campo visual", description: "Avalia a visão periférica, essencial para diagnóstico de glaucoma e doenças neurológicas.", category: "Glaucoma" },
+  { title: "Curva de pressão", description: "Avalia o comportamento da pressão ocular antes e após a ingestão de líquido.", category: "Glaucoma" },
+  { title: "Ecobiometria", description: "Ultrassom ocular para medir estruturas e calcular lentes intraoculares.", category: "Pré-Operatório" },
+  { title: "Exérese TU Conjuntival", description: "Procedimento de remoção de tumorações da conjuntiva.", category: "Cirúrgico" },
+  { title: "Fotocoagulação a laser", description: "Tratamento a laser indicado para diversas doenças retinianas, como retinopatia diabética.", category: "Retina" },
+  { title: "Fundoscopia sob midríase", description: "Avaliação detalhada da retina com pupila dilatada.", category: "Retina" },
+  { title: "Gonioscopia", description: "Exame que avalia o ângulo de drenagem do olho, fundamental no glaucoma.", category: "Glaucoma" },
+  { title: "Mapeamento de retina", description: "Exame aprofundado que analisa toda a retina, incluindo a periferia.", category: "Retina" },
+  { title: "Microscopia especular", description: "Avalia a quantidade e saúde das células da córnea (endotélio).", category: "Córnea" },
+  { title: "OCT de glaucoma", description: "Tomografia que avalia fibras nervosas e o nervo óptico com alta precisão.", category: "Glaucoma" },
+  { title: "OCT de retina", description: "Tomografia retiniana de alta resolução para diagnóstico de mácula e retina.", category: "Retina" },
+  { title: "PAM", description: "Avalia o potencial de visão do paciente, geralmente antes de cirurgias de catarata.", category: "Pré-Operatório" },
+  { title: "Paquimetria", description: "Mede com precisão a espessura da córnea.", category: "Córnea" },
+  { title: "Pterígio", description: "Avaliação clínica do tecido fibrovascular que cresce sobre a córnea.", category: "Superfície Ocular" },
+  { title: "Refração sob cicloplegia", description: "Exame de grau realizado com relaxamento do foco ocular (colírio dilatador).", category: "Geral" },
+  { title: "Retinografia", description: "Registro fotográfico detalhado do fundo do olho e nervo óptico.", category: "Retina" },
+  { title: "Sondagem de vias lacrimais", description: "Desobstrução e avaliação das vias lacrimais.", category: "Vias Lacrimais" },
+  { title: "Teste do olhinho", description: "Avaliação da transparência ocular em bebês recém-nascidos.", category: "Pediatria" },
+  { title: "Teste de sobrecarga", description: "Avalia a pressão ocular após sobrecarga hídrica.", category: "Glaucoma" },
+  { title: "Tonometria", description: "Medição da pressão intraocular, essencial para rastreio de glaucoma.", category: "Glaucoma" },
+  { title: "Topografia", description: "Mapeamento da curvatura e formato da córnea.", category: "Córnea" },
+  { title: "Ultrassonografia", description: "Ultrassom para análise interna do globo ocular quando há opacidade.", category: "Geral" },
+  { title: "Visão subnormal", description: "Avaliação e acompanhamento de pacientes com baixa visão severa.", category: "Especial" },
+  { title: "YAG capsulotomia", description: "Laser para limpar a 'sujeira' da lente intraocular pós-catarata.", category: "Laser" },
+  { title: "YAG iridectomia", description: "Laser que cria uma abertura na íris para tratamento ou prevenção de glaucoma.", category: "Laser" }
 ];

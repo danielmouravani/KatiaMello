@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { CheckCircle2, ArrowRight, ShieldCheck, Clock, Eye, AlertCircle, Phone, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
-import { LENSES } from '../constants';
-import GeneratedCataractImage from './GeneratedCataractImage';
+import { LENSES, WHATSAPP_LINK } from '../constants';
 
 interface CataractPageProps {
-  onNavigate: (page: 'home' | 'cataract') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams') => void;
 }
 
 const FAQ_ITEMS = [
@@ -63,7 +62,9 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <a 
-                  href="https://wa.me/"
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 rounded-xl font-bold transition-all shadow-lg shadow-green-500/30 transform hover:-translate-y-1 animate-pulse"
                 >
                   <Phone size={24} />
@@ -82,20 +83,20 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
               </div>
             </div>
 
-            {/* Imagem Gerada (Prova Visual) */}
+            {/* Imagem Estática (Alta Conversão - Carregamento Rápido) */}
             <div className="md:w-1/2 w-full flex justify-center relative">
                <div className="relative group w-full max-w-md">
                  <div className="absolute -inset-1 bg-gradient-to-r from-brand-400 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                  <div className="relative bg-slate-800 rounded-3xl p-2 shadow-2xl">
-                    <GeneratedCataractImage 
-                      fallbackSrc="https://images.unsplash.com/photo-1579684385127-1ef15d508118" 
-                      alt="Olho com catarata avançada" 
+                    <img 
+                      src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/unnamed-pPL6tHtNi8aqAr0W.jpg" 
+                      alt="Olho com catarata" 
                       className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl"
                     />
                     <div className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
                       <p className="text-white font-medium text-sm flex items-center gap-2">
                         <AlertCircle size={16} className="text-yellow-400" />
-                        Olho com Catarata
+                        Diagnóstico Especializado
                       </p>
                     </div>
                  </div>
@@ -186,7 +187,7 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                </div>
 
                <div className="mt-8">
-                  <a href="https://wa.me/" className="inline-flex items-center gap-2 text-brand-600 font-bold border-b-2 border-brand-200 hover:border-brand-600 transition-all pb-1">
+                  <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-brand-600 font-bold border-b-2 border-brand-200 hover:border-brand-600 transition-all pb-1">
                     Falar com especialista agora <ArrowRight size={18} />
                   </a>
                </div>
@@ -278,7 +279,9 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                 Agenda aberta para este mês. Aceitamos os principais convênios.
               </p>
               <a 
-                href="https://wa.me/"
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center gap-3 bg-white text-brand-700 hover:bg-slate-100 px-8 py-5 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
               >
                 <Phone size={20} className="fill-current" />
@@ -291,18 +294,7 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
           </div>
         </div>
       </section>
-
-      {/* FLOATING CTA MOBILE */}
-      <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
-        <a 
-          href="https://wa.me/"
-          className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-xl shadow-black/20 animate-bounce-slow"
-        >
-          <Phone size={20} className="fill-white" />
-          Agendar Consulta
-        </a>
-      </div>
-
+      
     </div>
   );
 };

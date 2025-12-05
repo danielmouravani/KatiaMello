@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
-import { NAV_ITEMS } from '../constants';
+import { NAV_ITEMS, WHATSAPP_LINK } from '../constants';
 
 interface NavbarProps {
-  onNavigate: (page: 'home' | 'cataract') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams') => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
@@ -24,6 +24,16 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
     
     if (href === 'cataract') {
       onNavigate('cataract');
+      return;
+    }
+
+    if (href === 'refractive') {
+      onNavigate('refractive');
+      return;
+    }
+
+    if (href === 'exams') {
+      onNavigate('exams');
       return;
     }
     
@@ -75,7 +85,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </a>
           ))}
           <a 
-            href="https://wa.me/" 
+            href={WHATSAPP_LINK} 
             target="_blank" 
             rel="noreferrer"
             className="flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 border border-brand-400/20"
@@ -108,7 +118,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             </a>
           ))}
           <a 
-            href="https://wa.me/" 
+            href={WHATSAPP_LINK}
+            target="_blank" 
+            rel="noreferrer" 
             className="flex items-center justify-center gap-2 bg-brand-500 text-white py-3 rounded-lg font-bold mt-2"
             onClick={() => setIsOpen(false)}
           >
