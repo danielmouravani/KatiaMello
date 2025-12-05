@@ -15,66 +15,91 @@ import { Phone, X } from 'lucide-react';
 import { WHATSAPP_LINK } from './constants';
 
 const App: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams'>('home');
+  // 1. Inicializa o estado lendo a URL IMEDIATAMENTE.
+  // Isso previne que a Home "pisque" antes de carregar a página correta.
+  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams'>(() => {
+    if (typeof window === 'undefined') return 'home';
+    
+    const hash = window.location.hash.toLowerCase();
+    const path = window.location.pathname.toLowerCase();
+
+    // Verifica se a URL contém as palavras-chave (suporta #catarata, /catarata, ?utm=... etc)
+    if (hash.includes('catarata') || path.includes('catarata')) return 'cataract';
+    if (hash.includes('refrativa') || path.includes('refrativa')) return 'refractive';
+    if (hash.includes('exames') || path.includes('exames')) return 'exams';
+    
+    return 'home';
+  });
+
   const [showBubble, setShowBubble] = useState(false);
   const [isBubbleClosed, setIsBubbleClosed] = useState(false);
 
-  // Implementação de Roteamento Baseado em Hash (#)
-  // URL: #catarata -> Page: cataract
-  // URL: #refrativa -> Page: refractive
-  // URL: #exames -> Page: exams
-  // URL: # (ou qualquer outra) -> Page: home (com scroll se houver ancora)
-
   useEffect(() => {
-    const handleHashChange = () => {
+    const handleUrlChange = () => {
       const hash = window.location.hash.toLowerCase();
+      const path = window.location.pathname.toLowerCase();
       
-      // Lógica de Roteamento de Páginas
-      if (hash === '#catarata') {
-        setCurrentPage('cataract');
-        window.scrollTo(0, 0);
-      } else if (hash === '#refrativa') {
-        setCurrentPage('refractive');
-        window.scrollTo(0, 0);
-      } else if (hash === '#exames') {
-        setCurrentPage('exams');
-        window.scrollTo(0, 0);
-      } else {
-        // Se não for uma página dedicada, assume que é Home
-        if (currentPage !== 'home') {
-          setCurrentPage('home');
+      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' = 'home';
+
+      // Lógica Híbrida: Aceita tanto Hash quanto Path
+      if (hash.includes('catarata') || path.includes('catarata')) {
+        newPage = 'cataract';
+      } else if (hash.includes('refrativa') || path.includes('refrativa')) {
+        newPage = 'refractive';
+      } else if (hash.includes('exames') || path.includes('exames')) {
+        newPage = 'exams';
+      }
+
+      // Só atualiza se mudou, para evitar re-renders desnecessários
+      setCurrentPage((prev) => {
+        if (prev !== newPage) {
+          window.scrollTo(0, 0);
+          return newPage;
         }
-        
-        // Se for um link de âncora da home (ex: #team), faz o scroll
-        if (hash && hash !== '#home') {
-           setTimeout(() => {
-             // Pequeno delay para garantir que o componente Home montou
-             const element = document.querySelector(hash);
+        return prev;
+      });
+
+      // Se for Home e tiver uma âncora específica (ex: #team), faz o scroll
+      if (newPage === 'home' && hash && !hash.includes('home')) {
+         setTimeout(() => {
+           try {
+             // Remove o # para pegar o ID
+             const id = hash.replace('#', '');
+             const element = document.getElementById(id);
              if (element) {
                element.scrollIntoView({ behavior: 'smooth' });
              }
-           }, 100);
-        } else {
-           // Se for apenas # ou #home, vai pro topo
-           window.scrollTo(0, 0);
-        }
+           } catch (e) {
+             console.error("Erro ao rolar para âncora:", e);
+           }
+         }, 100);
       }
     };
 
-    // Executa na carga inicial
-    handleHashChange();
+    // Escuta mudanças de hash e de histórico (voltar/avançar)
+    window.addEventListener('hashchange', handleUrlChange);
+    window.addEventListener('popstate', handleUrlChange);
+    
+    // Executa uma vez para garantir (caso haja redirects)
+    handleUrlChange();
 
-    // Escuta mudanças de hash (cliques em links ou botões voltar/avançar)
-    window.addEventListener('hashchange', handleHashChange);
-    return () => window.removeEventListener('hashchange', handleHashChange);
-  }, [currentPage]);
+    return () => {
+      window.removeEventListener('hashchange', handleUrlChange);
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  }, []);
 
   const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams') => {
-    // Essa função agora apenas atualiza o hash, o useEffect lida com a mudança de estado
-    if (page === 'cataract') window.location.hash = 'catarata';
-    else if (page === 'refractive') window.location.hash = 'refrativa';
-    else if (page === 'exams') window.location.hash = 'exames';
-    else window.location.hash = ''; 
+    try {
+      if (page === 'cataract') window.location.hash = 'catarata';
+      else if (page === 'refractive') window.location.hash = 'refrativa';
+      else if (page === 'exams') window.location.hash = 'exames';
+      else window.location.hash = 'home';
+    } catch (e) {
+      // Fallback para ambientes onde manipular a URL é bloqueado (ex: iframes sandboxed)
+      setCurrentPage(page);
+      window.scrollTo(0, 0);
+    }
   };
 
   useEffect(() => {
