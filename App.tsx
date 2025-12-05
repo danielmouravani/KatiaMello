@@ -61,7 +61,12 @@ const App: React.FC = () => {
     if (page === 'refractive') friendlyUrl = '/refrativa';
     if (page === 'exams') friendlyUrl = '/exames';
 
-    window.history.pushState({}, '', friendlyUrl);
+    try {
+      window.history.pushState({}, '', friendlyUrl);
+    } catch (e) {
+      // Ignore security errors in sandboxed environments
+      console.warn('Navigation URL update blocked by environment:', e);
+    }
   };
 
   useEffect(() => {
