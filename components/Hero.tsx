@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Star } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
+import BookingModal from './BookingModal';
 
 const Hero: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
       {/* Background Decor */}
@@ -33,15 +36,13 @@ const Hero: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a 
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30"
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30 cursor-pointer"
             >
               Agendar Consulta
               <ArrowRight size={20} />
-            </a>
+            </button>
             <a 
               href="#specialties"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-md px-8 py-4 rounded-xl font-semibold transition-all"
@@ -97,6 +98,8 @@ const Hero: React.FC = () => {
            </div>
         </div>
       </div>
+      
+      <BookingModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 };

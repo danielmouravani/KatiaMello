@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -10,23 +11,24 @@ import Partners from './components/Partners';
 import Footer from './components/Footer';
 import CataractPage from './components/CataractPage';
 import RefractivePage from './components/RefractivePage';
+import OculoplasticsPage from './components/OculoplasticsPage';
 import ExamsPage from './components/ExamsPage';
+import BookingSection from './components/BookingSection';
 import { Phone, X } from 'lucide-react';
 import { WHATSAPP_LINK } from './constants';
 
 const App: React.FC = () => {
   // 1. Inicializa o estado lendo a URL IMEDIATAMENTE.
-  // Isso previne que a Home "pisque" antes de carregar a página correta.
-  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams'>(() => {
+  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics'>(() => {
     if (typeof window === 'undefined') return 'home';
     
     const hash = window.location.hash.toLowerCase();
     const path = window.location.pathname.toLowerCase();
 
-    // Verifica se a URL contém as palavras-chave (suporta #catarata, /catarata, ?utm=... etc)
     if (hash.includes('catarata') || path.includes('catarata')) return 'cataract';
     if (hash.includes('refrativa') || path.includes('refrativa')) return 'refractive';
     if (hash.includes('exames') || path.includes('exames')) return 'exams';
+    if (hash.includes('oculoplastica') || path.includes('oculoplastica')) return 'oculoplastics';
     
     return 'home';
   });
@@ -39,18 +41,18 @@ const App: React.FC = () => {
       const hash = window.location.hash.toLowerCase();
       const path = window.location.pathname.toLowerCase();
       
-      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' = 'home';
+      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' = 'home';
 
-      // Lógica Híbrida: Aceita tanto Hash quanto Path
       if (hash.includes('catarata') || path.includes('catarata')) {
         newPage = 'cataract';
       } else if (hash.includes('refrativa') || path.includes('refrativa')) {
         newPage = 'refractive';
       } else if (hash.includes('exames') || path.includes('exames')) {
         newPage = 'exams';
+      } else if (hash.includes('oculoplastica') || path.includes('oculoplastica')) {
+        newPage = 'oculoplastics';
       }
 
-      // Só atualiza se mudou, para evitar re-renders desnecessários
       setCurrentPage((prev) => {
         if (prev !== newPage) {
           window.scrollTo(0, 0);
@@ -59,11 +61,9 @@ const App: React.FC = () => {
         return prev;
       });
 
-      // Se for Home e tiver uma âncora específica (ex: #team), faz o scroll
       if (newPage === 'home' && hash && !hash.includes('home')) {
          setTimeout(() => {
            try {
-             // Remove o # para pegar o ID
              const id = hash.replace('#', '');
              const element = document.getElementById(id);
              if (element) {
@@ -76,11 +76,8 @@ const App: React.FC = () => {
       }
     };
 
-    // Escuta mudanças de hash e de histórico (voltar/avançar)
     window.addEventListener('hashchange', handleUrlChange);
     window.addEventListener('popstate', handleUrlChange);
-    
-    // Executa uma vez para garantir (caso haja redirects)
     handleUrlChange();
 
     return () => {
@@ -89,14 +86,14 @@ const App: React.FC = () => {
     };
   }, []);
 
-  const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams') => {
+  const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => {
     try {
       if (page === 'cataract') window.location.hash = 'catarata';
       else if (page === 'refractive') window.location.hash = 'refrativa';
       else if (page === 'exams') window.location.hash = 'exames';
+      else if (page === 'oculoplastics') window.location.hash = 'oculoplastica';
       else window.location.hash = 'home';
     } catch (e) {
-      // Fallback para ambientes onde manipular a URL é bloqueado (ex: iframes sandboxed)
       setCurrentPage(page);
       window.scrollTo(0, 0);
     }
@@ -106,7 +103,7 @@ const App: React.FC = () => {
     if (!isBubbleClosed) {
       const timer = setTimeout(() => {
         setShowBubble(true);
-      }, 5000); // 5 seconds delay
+      }, 5000); // Retornado para 5s agora que não há popup inicial
       return () => clearTimeout(timer);
     }
   }, [isBubbleClosed]);
@@ -131,11 +128,14 @@ const App: React.FC = () => {
             <Team />
             <Gallery />
             <Testimonials />
+            <BookingSection />
           </>
         ) : currentPage === 'cataract' ? (
           <CataractPage onNavigate={navigateTo} />
         ) : currentPage === 'refractive' ? (
           <RefractivePage onNavigate={navigateTo} />
+        ) : currentPage === 'oculoplastics' ? (
+          <OculoplasticsPage onNavigate={navigateTo} />
         ) : (
           <ExamsPage onNavigate={navigateTo} />
         )}
@@ -165,7 +165,6 @@ const App: React.FC = () => {
             Agende sua consulta agora pelo WhatsApp.
           </p>
           
-          {/* Arrow Pointer */}
           <div className="absolute -bottom-2 right-4 w-4 h-4 bg-white transform rotate-45 border-r border-b border-slate-100"></div>
         </div>
 
@@ -177,7 +176,6 @@ const App: React.FC = () => {
           className="pointer-events-auto relative bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center group"
           aria-label="Falar no WhatsApp"
         >
-          {/* Pulse/Ping Animation Ring */}
           <span className="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75 animate-ping"></span>
           
           <div className="relative z-10">

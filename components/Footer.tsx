@@ -2,7 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react';
 
 interface FooterProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
@@ -30,6 +30,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <li><a href="#" className="hover:text-brand-400 transition-colors">Home</a></li>
             <li><a href="#catarata" className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia de Catarata</a></li>
             <li><a href="#refrativa" className="hover:text-brand-400 transition-colors text-brand-300">Cirurgia Refrativa</a></li>
+            <li><a href="#oculoplastica" className="hover:text-brand-400 transition-colors text-brand-300">Oculoplástica</a></li>
             <li><a href="#exames" className="hover:text-brand-400 transition-colors text-brand-300">Exames</a></li>
             <li><a href="#specialties" className="hover:text-brand-400 transition-colors">Especialidades</a></li>
             <li><a href="#partners" className="hover:text-brand-400 transition-colors">Convênios</a></li>

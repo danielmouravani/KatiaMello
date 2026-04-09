@@ -2,6 +2,7 @@ import { Eye, Activity, ShieldCheck, Microscope, Glasses, Users } from "lucide-r
 import { NavItem, Specialty, Doctor, Testimonial, Stat, Partner, Lens, Exam } from "./types";
 
 export const WHATSAPP_LINK = "https://wa.me/5521987445823?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es";
+export const DOCTORALIA_LINK = "https://www.doctoralia.com.br/clinicas/centro-da-saude-ocular-dra-katia-mello-3?utm_id=49014&utm_source=widget-facility-49014&utm_medium=facility-big&utm_campaign=&utm_content=#highlight-calendar";
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "#home" },
@@ -45,6 +46,12 @@ export const SPECIALTIES: Specialty[] = [
     description: "Controle da pressão intraocular com colírios, lasers e cirurgias minimamente invasivas.",
     icon: ShieldCheck,
     image: "https://picsum.photos/400/300?random=5"
+  },
+  {
+    title: "Oculoplástica",
+    description: "Cirurgias estéticas e reparadoras das pálpebras e tratamento das vias lacrimais.",
+    icon: Eye,
+    image: "https://picsum.photos/400/300?random=7"
   },
   {
     title: "Lentes de Contato",

@@ -3,7 +3,7 @@ import { Search, Eye, ArrowRight, Phone, FileSearch, CalendarCheck, Microscope }
 import { EXAMS, WHATSAPP_LINK } from '../constants';
 
 interface ExamsPageProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => void;
 }
 
 const ExamsPage: React.FC<ExamsPageProps> = ({ onNavigate }) => {
