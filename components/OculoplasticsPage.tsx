@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight, ShieldCheck, Clock, Eye, AlertCircle, Phone, 
 import { WHATSAPP_LINK } from '../constants';
 
 interface OculoplasticsPageProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
 }
 
 const FAQ_ITEMS = [

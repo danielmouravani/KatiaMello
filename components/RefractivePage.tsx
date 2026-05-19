@@ -3,7 +3,7 @@ import { CheckCircle2, ArrowRight, ShieldCheck, Zap, Eye, AlertCircle, Phone, He
 import { WHATSAPP_LINK } from '../constants';
 
 interface RefractivePageProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
 }
 
 const FAQ_ITEMS = [

@@ -15,12 +15,13 @@ import OculoplasticsPage from './components/OculoplasticsPage';
 import ExamsPage from './components/ExamsPage';
 import BookingSection from './components/BookingSection';
 import HomePopup from './components/HomePopup';
+import SurveyPage from './components/SurveyPage';
 import { Phone, X } from 'lucide-react';
 import { WHATSAPP_LINK } from './constants';
 
 const App: React.FC = () => {
   // 1. Inicializa o estado lendo a URL IMEDIATAMENTE.
-  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics'>(() => {
+  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey'>(() => {
     if (typeof window === 'undefined') return 'home';
     
     const hash = window.location.hash.toLowerCase();
@@ -30,6 +31,7 @@ const App: React.FC = () => {
     if (hash.includes('refrativa') || path.includes('refrativa')) return 'refractive';
     if (hash.includes('exames') || path.includes('exames')) return 'exams';
     if (hash.includes('oculoplastica') || path.includes('oculoplastica')) return 'oculoplastics';
+    if (hash.includes('pesquisa') || path.includes('pesquisa')) return 'survey';
     
     return 'home';
   });
@@ -42,7 +44,7 @@ const App: React.FC = () => {
       const hash = window.location.hash.toLowerCase();
       const path = window.location.pathname.toLowerCase();
       
-      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' = 'home';
+      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' = 'home';
 
       if (hash.includes('catarata') || path.includes('catarata')) {
         newPage = 'cataract';
@@ -52,6 +54,8 @@ const App: React.FC = () => {
         newPage = 'exams';
       } else if (hash.includes('oculoplastica') || path.includes('oculoplastica')) {
         newPage = 'oculoplastics';
+      } else if (hash.includes('pesquisa') || path.includes('pesquisa')) {
+        newPage = 'survey';
       }
 
       setCurrentPage((prev) => {
@@ -87,12 +91,13 @@ const App: React.FC = () => {
     };
   }, []);
 
-  const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => {
+  const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => {
     try {
       if (page === 'cataract') window.location.hash = 'catarata';
       else if (page === 'refractive') window.location.hash = 'refrativa';
       else if (page === 'exams') window.location.hash = 'exames';
       else if (page === 'oculoplastics') window.location.hash = 'oculoplastica';
+      else if (page === 'survey') window.location.hash = 'pesquisa';
       else window.location.hash = 'home';
     } catch (e) {
       setCurrentPage(page);
@@ -137,6 +142,8 @@ const App: React.FC = () => {
           <RefractivePage onNavigate={navigateTo} />
         ) : currentPage === 'oculoplastics' ? (
           <OculoplasticsPage onNavigate={navigateTo} />
+        ) : currentPage === 'survey' ? (
+          <SurveyPage onNavigate={navigateTo} />
         ) : (
           <ExamsPage onNavigate={navigateTo} />
         )}

@@ -2,7 +2,7 @@ import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react';
 
 interface FooterProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {

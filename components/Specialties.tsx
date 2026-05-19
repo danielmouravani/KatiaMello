@@ -3,7 +3,7 @@ import { SPECIALTIES } from '../constants';
 import { ArrowRight } from 'lucide-react';
 
 interface SpecialtiesProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
 }
 
 const Specialties: React.FC<SpecialtiesProps> = ({ onNavigate }) => {
