@@ -14,6 +14,7 @@ import RefractivePage from './components/RefractivePage';
 import OculoplasticsPage from './components/OculoplasticsPage';
 import ExamsPage from './components/ExamsPage';
 import BookingSection from './components/BookingSection';
+import HomePopup from './components/HomePopup';
 import { Phone, X } from 'lucide-react';
 import { WHATSAPP_LINK } from './constants';
 
@@ -186,6 +187,7 @@ const App: React.FC = () => {
       </div>
 
       <Footer onNavigate={navigateTo} />
+      <HomePopup />
     </div>
   );
 };
