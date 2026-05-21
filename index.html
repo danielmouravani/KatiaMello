@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro de Saúde Ocular Katia Mello</title>
+    <!-- Prevent TypeError: Cannot set property fetch of #<Window> which has only a getter -->
+    <script>
+      (function() {
+        try {
+          var _originalFetch = window.fetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _originalFetch;
+            },
+            set: function(val) {
+              _originalFetch = val;
+            }
+          });
+        } catch (e) {
+          console.warn("Could not patch window.fetch:", e);
+        }
+      })();
+    </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

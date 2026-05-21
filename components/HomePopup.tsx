@@ -50,7 +50,7 @@ const HomePopup: React.FC = () => {
           onClick={closePopup}
         >
           <img 
-            src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1779188924/rxujrjogihkilogpau5p.png" 
+            src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1779365720/xxop0jvydfco8dmx8pvg.jpg" 
             alt="Comunicado" 
             className="w-full h-auto object-contain max-h-[85vh]"
           />
