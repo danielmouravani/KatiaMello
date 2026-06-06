@@ -74,8 +74,8 @@ const Hero: React.FC = () => {
         <div className="relative hidden md:block">
            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/20 border border-slate-700/50 group">
              <img 
-              src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-3-ALpeJ4346DcZL7Xg.jpeg" 
-              alt="Centro Katia Mello" 
+              src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1780754865/wmotptj20txizvxa6wui.jpg" 
+              alt="Centro Katia Mello" referrerPolicy="no-referrer" 
               className="w-full h-[500px] object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end px-8 pb-24">
