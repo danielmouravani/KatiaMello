@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react';
+import { WHATSAPP_LINK } from '../constants';
 
 interface FooterProps {
   onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
@@ -47,13 +48,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <li className="flex flex-col gap-2">
               <div className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-500 shrink-0" />
-                <span>(21) 3344-7321</span>
+                <a href="tel:+552133447321" className="hover:text-brand-400 transition-colors">(21) 3344-7321</a>
               </div>
               <div className="flex items-center gap-3 pl-8">
-                <span>(21) 98744-5823</span>
-              </div>
-              <div className="flex items-center gap-3 pl-8">
-                <span>(21) 98744-5827</span>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="hover:text-brand-400 text-brand-300 transition-colors flex items-center gap-1.5">
+                  <span>(21) 98744-5827</span>
+                  <span className="text-[10px] bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded font-bold font-sans uppercase tracking-wider">WhatsApp</span>
+                </a>
               </div>
             </li>
             <li className="flex items-center gap-3">
