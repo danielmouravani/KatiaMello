@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { X, MessageCircle } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
 
-// Link da imagem da campanha. Usamos um placeholder inicialmente para que o usuário saiba onde colocar,
-// ou para que ele possa carregar a imagem real por aqui.
-const CAMPAIGN_IMAGE_URL = "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1000"; 
+// Link da imagem da campanha.
+const CAMPAIGN_IMAGE_URL = "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611109/y3dy9ecc7wnwdihyuash.jpg"; 
 
 const CampaignPopup: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

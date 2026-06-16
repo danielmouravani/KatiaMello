@@ -75,6 +75,7 @@ const Team: React.FC = () => {
                 src={doctor.image} 
                 alt={doctor.name} 
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/25 to-transparent opacity-80 group-hover:opacity-100 transition-opacity"></div>
               
@@ -134,6 +135,7 @@ const Team: React.FC = () => {
                     src={selectedDoctor.image} 
                     alt={selectedDoctor.name} 
                     className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="space-y-1.5 pt-2">

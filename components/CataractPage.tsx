@@ -92,6 +92,7 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                       src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/unnamed-pPL6tHtNi8aqAr0W.jpg" 
                       alt="Olho com catarata" 
                       className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl"
+
                     />
                     <div className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
                       <p className="text-white font-medium text-sm flex items-center gap-2">

@@ -65,33 +65,33 @@ export const DOCTORS: Doctor[] = [
   {
     name: "Dra. Katia Mello",
     specialty: "Catarata",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-katia-que-cabe-A85e4prWEzTLbe2p.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/k5fem1vazulvsb9awhac.jpg"
   },
   {
     name: "Dra. Fabia Crespo",
     specialty: "Glaucoma",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/img_5543-2-A3Q2pg8qv8TDWEv8.jpg",
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611527/cocyetc5l0bin5s99gwu.jpg",
     crm: "52838446"
   },
   {
     name: "Dra. Claudia Morgado",
     specialty: "Córnea",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/470494881_582373847728893_3199652955436485462_n-mjE792GKxacvBDPZ.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611527/wvy94bshgxcmfu6uuvad.jpg"
   },
   {
     name: "Dr. Rodrigo Borges",
     specialty: "Córnea",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-borges-AGBznl628jfrE5gm.jpeg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611527/n9sudoqdnklxacxrj59d.jpg"
   },
   {
     name: "Dra. Marceli Bastos",
     specialty: "Oftalmologista",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-marceli-bastos_-Awv4rnakX6c9K08Z.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/nhfg4lqcwjubgbwh1ofp.jpg"
   },
   {
     name: "Dra. Alana Reis",
     specialty: "Glaucoma",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-alana-maggesissi_-AGB2G52gO7t2DqRW.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/aebceymk1wp6m5anugjs.jpg"
   },
   {
     name: "Dr. Rodrigo Pegado",
@@ -106,12 +106,12 @@ export const DOCTORS: Doctor[] = [
   {
     name: "Dra. Adriana Franco",
     specialty: "Retina",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dra-adriana-franco_-mp8Wn5DJnZuv6NE0.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/elbuqhnwiogiq51sxdvz.jpg"
   },
   {
     name: "Dra. Julia Soares",
     specialty: "Córnea",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/f97cc78b-f8ae-4c37-8832-46ade3a4b5ff-mv0P2wDJWViBZRMb.png"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/lyhsqchommpwjvikoawu.png"
   }
 ];
 

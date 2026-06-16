@@ -106,7 +106,7 @@ const OculoplasticsPage: React.FC<OculoplasticsPageProps> = ({ onNavigate }) => 
                       src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/chatgpt-image-9-de-abr.-de-2026-10_55_14-C5qrYtgDvkzYhosC.png" 
                       alt="Oculoplástica e Vias Lacrimais" 
                       className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl opacity-90"
-                      referrerPolicy="no-referrer"
+
                     />
                     <div className="absolute bottom-6 right-6 bg-black/70 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
                       <p className="text-white font-medium text-sm flex items-center gap-2">
@@ -204,7 +204,7 @@ const OculoplasticsPage: React.FC<OculoplasticsPageProps> = ({ onNavigate }) => 
                    src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/06cacdb2-57a4-4c9d-8236-c87dbbfc2300-fR3eHbdtAQCgfjCF.png" 
                    alt="Atendimento Especializado" 
                    className="w-full h-[500px] object-cover"
-                   referrerPolicy="no-referrer"
+
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-8">
                    <div className="text-white">

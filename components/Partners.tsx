@@ -29,6 +29,7 @@ const Partners: React.FC = () => {
                   src={partner.logo} 
                   alt={partner.name} 
                   className="max-h-full max-w-full object-contain"
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
