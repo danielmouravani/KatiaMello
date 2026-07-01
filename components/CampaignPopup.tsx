@@ -3,7 +3,7 @@ import { X, MessageCircle } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
 
 // Link da imagem da campanha.
-const CAMPAIGN_IMAGE_URL = "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611109/y3dy9ecc7wnwdihyuash.jpg"; 
+const CAMPAIGN_IMAGE_URL = "https://res.cloudinary.com/dm2aqydrq/image/upload/v1782906534/gppjxymn7vddgps2dk4p.png"; 
 
 const CampaignPopup: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +26,8 @@ const CampaignPopup: React.FC = () => {
 
   if (!isOpen) return null;
 
-  // Link personalizado do WhatsApp para a campanha de Saúde Visual do dia 30/06
-  const CAMPAIGN_WHATSAPP_LINK = "https://wa.me/5521987445827?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o%20especial%20da%20Campanha%20de%20Sa%C3%BAde%20Visual%20do%20dia%2030%2F06%21";
+  // Link personalizado do WhatsApp para a campanha de Saúde Visual do dia 10/07 por R$130,00
+  const CAMPAIGN_WHATSAPP_LINK = "https://wa.me/5521987445827?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20campanha%20visual%20do%20dia%2010%2F07%20por%20R%24130%2C00";
 
   return (
     <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-6 animate-fade-in">
@@ -60,7 +60,7 @@ const CampaignPopup: React.FC = () => {
           <div className="absolute inset-0 bg-slate-950/10 group-hover:bg-transparent transition-colors duration-300 z-10"></div>
           <img 
             src={CAMPAIGN_IMAGE_URL} 
-            alt="Campanha de Saúde Visual dia 30/06" 
+            alt="Campanha de Saúde Visual dia 10/07" 
             referrerPolicy="no-referrer"
             className="w-full h-auto max-h-[65vh] object-contain mx-auto transform transition-transform duration-500 group-hover:scale-[1.02]"
           />
