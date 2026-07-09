@@ -99,11 +99,6 @@ export const DOCTORS: Doctor[] = [
     image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-pegado-YD0lpx432bU94ZzY.jpg"
   },
   {
-    name: "Dr. Marcio Monteiro",
-    specialty: "Oftalmologista",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-marcio-pereira-m6LZvR7bw1ipERaR.jpg"
-  },
-  {
     name: "Dra. Adriana Franco",
     specialty: "Retina",
     image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/elbuqhnwiogiq51sxdvz.jpg"
@@ -182,21 +177,21 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const PARTNERS: Partner[] = [
-  { name: "Amil", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/amil-YbNB9aoNxzc51oO1.png" },
-  { name: "Bradesco Saúde", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/bradesco-saude-dJoZ4JjqMetr57bD.png" },
+  { name: "Amil", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/fnwpq1ucyz0pbwdhmdlr.png" },
+  { name: "Bradesco Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/wwpogflig5bj8hhok0eg.png" },
   { name: "Care Plus", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/care-plus-Aq2WoBOk3yHN0jO9.png" },
   { name: "Caurj", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/caurj-AzGX7rqGkEUkkqB1.png" },
-  { name: "Real Grandeza", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/fundacao-real-grandeza-YNqBrJv8RpSeE1Dy.png" },
-  { name: "Geap Saúde", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/geap-saude-Awv4kr7GxkFBVwxE.png" },
+  { name: "Real Grandeza", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/ldnkjhh0ylccfo3avtdv.png" },
+  { name: "Geap Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/fduj6yfoqx7y0a5gp9ym.png" },
   { name: "Marinha do Brasil", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/marinha-A85e4po5gZIZDKxD.png" },
-  { name: "Omint", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/omint-mp8W9na8Nyi0wyw5.png" },
-  { name: "Porto Seguro", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/porto-seguro-AE0P4pBzRxi6vMNG.png" },
+  { name: "Omint", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/vs135hspbkirkv2yovgi.png" },
+  { name: "Porto Seguro", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/pgcm4pecinf2bwcc062o.png" },
   { name: "Saúde Caixa", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/saude-caixa-mv0W7jEogOFpMDN7.png" },
   { name: "Saúde Petrobras", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/saude-petrobras-Yyv97ozGrkse8e2Z.png" },
-  { name: "SulAmérica", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/sulamerica-saude-Awv4kr7v56c2bVO0.png" },
+  { name: "SulAmérica", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/hwow2fudufnjufcnfjw3.png" },
   { name: "Assefaz", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assffaz-Yyv97ozGbPsyr3jz.png" },
   { name: "Assim Saúde", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assim-AR0LbJ6qk0c8pWwn.png" },
-  { name: "Mediservice", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/mediservice-YZ98b2y4kKupqbZ4.png" },
+  { name: "Mediservice", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/fnapx2vvkpf7c9shf8lw.png" },
   { name: "Nuclep", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/nuclep-d951gpRv03F6naGD.png" },
 ];
 

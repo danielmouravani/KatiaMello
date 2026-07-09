@@ -18,13 +18,13 @@ const Gallery: React.FC = () => {
             
             <div className="md:w-2/3 grid grid-cols-12 gap-4 h-96 w-full">
                 <div className="col-span-8 row-span-2 rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-2-m6LZvBnB6asgLZqa.jpeg" alt="Estrutura da Clínica Principal" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611731/qkz3s5rkkinqimwcb3qf.jpg" alt="Estrutura da Clínica Principal" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="col-span-4 row-span-1 rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-1-d951pxJxqWi2aJ82.jpeg" alt="Equipamentos Modernos" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611731/kk6m7nuckvzosoxg0cd5.jpg" alt="Equipamentos Modernos" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
                 <div className="col-span-4 row-span-1 rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-4-YX4lPR3q9nIRWwxY.jpeg" alt="Ambiente Confortável" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611731/v0w25pk2lyhmkayf2dql.jpg" alt="Ambiente Confortável" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
             </div>
         </div>
