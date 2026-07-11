@@ -186,12 +186,12 @@ export const PARTNERS: Partner[] = [
   { name: "Marinha do Brasil", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/marinha-A85e4po5gZIZDKxD.png" },
   { name: "Omint", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/vs135hspbkirkv2yovgi.png" },
   { name: "Porto Seguro", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/pgcm4pecinf2bwcc062o.png" },
-  { name: "Saúde Caixa", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/saude-caixa-mv0W7jEogOFpMDN7.png" },
-  { name: "Saúde Petrobras", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/saude-petrobras-Yyv97ozGrkse8e2Z.png" },
+  { name: "Saúde Caixa", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783776787/ww1nvrkbvwjwolkzwnq1.png" },
+  { name: "Saúde Petrobras", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783776787/ws9fuwqivbij7zz38tre.png" },
   { name: "SulAmérica", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/hwow2fudufnjufcnfjw3.png" },
   { name: "Assefaz", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assffaz-Yyv97ozGbPsyr3jz.png" },
   { name: "Assim Saúde", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assim-AR0LbJ6qk0c8pWwn.png" },
-  { name: "Mediservice", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/fnapx2vvkpf7c9shf8lw.png" },
+  { name: "Mediservice", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783776787/i1rtspmqsxbohrsmmk9c.png" },
   { name: "Nuclep", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/nuclep-d951gpRv03F6naGD.png" },
 ];
 
