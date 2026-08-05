@@ -52,7 +52,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </div>
               <div className="flex items-center gap-3 pl-8">
                 <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="hover:text-brand-400 text-brand-300 transition-colors flex items-center gap-1.5">
-                  <span>(21) 98744-5827</span>
+                  <span>(21) 98744-5823</span>
                   <span className="text-[10px] bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded font-bold font-sans uppercase tracking-wider">WhatsApp</span>
                 </a>
               </div>
