@@ -15,12 +15,14 @@ import OculoplasticsPage from './components/OculoplasticsPage';
 import ExamsPage from './components/ExamsPage';
 import BookingSection from './components/BookingSection';
 import SurveyPage from './components/SurveyPage';
+import PrivacyPolicyPage from './components/PrivacyPolicyPage';
+import TermsOfUsePage from './components/TermsOfUsePage';
 import { Phone, X } from 'lucide-react';
 import { WHATSAPP_LINK } from './constants';
 
 const App: React.FC = () => {
   // 1. Inicializa o estado lendo a URL IMEDIATAMENTE.
-  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey'>(() => {
+  const [currentPage, setCurrentPage] = useState<'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' | 'privacy' | 'terms'>(() => {
     if (typeof window === 'undefined') return 'home';
     
     const hash = window.location.hash.toLowerCase();
@@ -31,6 +33,8 @@ const App: React.FC = () => {
     if (hash.includes('exames') || path.includes('exames')) return 'exams';
     if (hash.includes('oculoplastica') || path.includes('oculoplastica')) return 'oculoplastics';
     if (hash.includes('pesquisa') || path.includes('pesquisa')) return 'survey';
+    if (hash.includes('politica-de-privacidade') || path.includes('politica-de-privacidade') || hash.includes('privacy') || path.includes('privacy')) return 'privacy';
+    if (hash.includes('termos-de-uso') || path.includes('termos-de-uso') || hash.includes('terms') || path.includes('terms')) return 'terms';
     
     return 'home';
   });
@@ -43,7 +47,7 @@ const App: React.FC = () => {
       const hash = window.location.hash.toLowerCase();
       const path = window.location.pathname.toLowerCase();
       
-      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' = 'home';
+      let newPage: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' | 'privacy' | 'terms' = 'home';
 
       if (hash.includes('catarata') || path.includes('catarata')) {
         newPage = 'cataract';
@@ -55,6 +59,10 @@ const App: React.FC = () => {
         newPage = 'oculoplastics';
       } else if (hash.includes('pesquisa') || path.includes('pesquisa')) {
         newPage = 'survey';
+      } else if (hash.includes('politica-de-privacidade') || path.includes('politica-de-privacidade') || hash.includes('privacy') || path.includes('privacy')) {
+        newPage = 'privacy';
+      } else if (hash.includes('termos-de-uso') || path.includes('termos-de-uso') || hash.includes('terms') || path.includes('terms')) {
+        newPage = 'terms';
       }
 
       setCurrentPage((prev) => {
@@ -90,13 +98,15 @@ const App: React.FC = () => {
     };
   }, []);
 
-  const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => {
+  const navigateTo = (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' | 'privacy' | 'terms') => {
     try {
       if (page === 'cataract') window.location.hash = 'catarata';
       else if (page === 'refractive') window.location.hash = 'refrativa';
       else if (page === 'exams') window.location.hash = 'exames';
       else if (page === 'oculoplastics') window.location.hash = 'oculoplastica';
       else if (page === 'survey') window.location.hash = 'pesquisa';
+      else if (page === 'privacy') window.location.hash = 'politica-de-privacidade';
+      else if (page === 'terms') window.location.hash = 'termos-de-uso';
       else window.location.hash = 'home';
     } catch (e) {
       setCurrentPage(page);
@@ -143,6 +153,10 @@ const App: React.FC = () => {
           <OculoplasticsPage onNavigate={navigateTo} />
         ) : currentPage === 'survey' ? (
           <SurveyPage onNavigate={navigateTo} />
+        ) : currentPage === 'privacy' ? (
+          <PrivacyPolicyPage onNavigate={navigateTo} />
+        ) : currentPage === 'terms' ? (
+          <TermsOfUsePage onNavigate={navigateTo} />
         ) : (
           <ExamsPage onNavigate={navigateTo} />
         )}

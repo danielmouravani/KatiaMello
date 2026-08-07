@@ -4,7 +4,7 @@ import { NAV_ITEMS, WHATSAPP_LINK } from '../constants';
 import BookingModal from './BookingModal';
 
 interface NavbarProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' | 'privacy' | 'terms') => void;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {

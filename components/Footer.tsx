@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Instagram, Facebook, Clock } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
 
 interface FooterProps {
-  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey') => void;
+  onNavigate: (page: 'home' | 'cataract' | 'refractive' | 'exams' | 'oculoplastics' | 'survey' | 'privacy' | 'terms') => void;
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
@@ -35,6 +35,8 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <li><a href="#exames" className="hover:text-brand-400 transition-colors text-brand-300">Exames</a></li>
             <li><a href="#specialties" className="hover:text-brand-400 transition-colors">Especialidades</a></li>
             <li><a href="#partners" className="hover:text-brand-400 transition-colors">Convênios</a></li>
+            <li><a href="#politica-de-privacidade" onClick={(e) => { e.preventDefault(); onNavigate('privacy'); }} className="hover:text-brand-400 transition-colors text-slate-400 hover:underline">Política de Privacidade</a></li>
+            <li><a href="#termos-de-uso" onClick={(e) => { e.preventDefault(); onNavigate('terms'); }} className="hover:text-brand-400 transition-colors text-slate-400 hover:underline">Termos de Uso</a></li>
           </ul>
         </div>
 
@@ -79,8 +81,14 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      <div className="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+      <div className="border-t border-slate-800 py-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
         <p>&copy; {new Date().getFullYear()} Centro de Saúde Ocular Katia Mello. Todos os direitos reservados.</p>
+        <a href="#politica-de-privacidade" onClick={(e) => { e.preventDefault(); onNavigate('privacy'); }} className="text-slate-400 hover:text-brand-400 underline transition-colors">
+          Política de Privacidade
+        </a>
+        <a href="#termos-de-uso" onClick={(e) => { e.preventDefault(); onNavigate('terms'); }} className="text-slate-400 hover:text-brand-400 underline transition-colors">
+          Termos de Uso
+        </a>
       </div>
     </footer>
   );
