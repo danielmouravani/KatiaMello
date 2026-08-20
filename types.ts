@@ -52,3 +52,11 @@ export interface Exam {
   description: string;
   category?: string;
 }
+
+declare global {
+  interface Window {
+    fbq?: (...args: any[]) => void;
+    _fbq?: any;
+    dataLayer?: any[];
+  }
+}

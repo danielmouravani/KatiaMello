@@ -42,6 +42,13 @@ const App: React.FC = () => {
   const [showBubble, setShowBubble] = useState(false);
   const [isBubbleClosed, setIsBubbleClosed] = useState(false);
 
+  // Disparar PageView no Meta Pixel sempre que a página mudar
+  useEffect(() => {
+    if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
+      window.fbq('track', 'PageView');
+    }
+  }, [currentPage]);
+
   useEffect(() => {
     const handleUrlChange = () => {
       const hash = window.location.hash.toLowerCase();
