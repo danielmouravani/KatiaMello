@@ -7,7 +7,7 @@ export const DOCTORALIA_LINK = "https://www.doctoralia.com.br/clinicas/centro-da
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "#home" },
   { label: "Catarata", href: "#catarata" },
-  { label: "Refrativa", href: "#refrativa" },
+  { label: "Córnea", href: "#refrativa" },
   { label: "Exames", href: "#exames" },
   { label: "Sobre", href: "#stats" },
   { label: "Especialidades", href: "#specialties" },
