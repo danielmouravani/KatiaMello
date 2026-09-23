@@ -60,8 +60,9 @@ const Counter = ({ end, duration = 2000, decimals = 0, prefix = "", suffix = "" 
 
 const Stats: React.FC = () => {
   return (
-    <section id="stats" className="py-20 -mt-20 relative z-20">
+    <section id="stats" className="py-20 -mt-20 relative z-20" aria-label="Indicadores da Clínica">
       <div className="container mx-auto px-4 md:px-6">
+        <h2 className="sr-only">Nossos Indicadores e Diferenciais</h2>
         <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/50 p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-slate-100">
           {STATS.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center p-4">

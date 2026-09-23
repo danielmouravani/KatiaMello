@@ -42,7 +42,7 @@ const RecessPopup: React.FC = () => {
         <button 
           onClick={closePopup}
           className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 hover:bg-slate-100 p-2 rounded-full transition-all z-30 bg-white/80 backdrop-blur shadow-sm border border-slate-100"
-          aria-label="Fechar"
+          aria-label="Fechar comunicado de recesso"
         >
           <X size={20} />
         </button>

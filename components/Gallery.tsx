@@ -11,7 +11,11 @@ const Gallery: React.FC = () => {
                  <p className="text-slate-600 mb-6">
                      Um ambiente projetado para oferecer bem-estar e segurança durante todo o seu atendimento.
                  </p>
-                 <a href="#footer" className="text-brand-600 font-bold hover:underline">
+                 <a 
+                   href="#footer" 
+                   className="text-brand-600 font-bold hover:underline"
+                   aria-label="Visite nossa unidade no centro de Duque de Caxias"
+                 >
                      Visite nossa unidade
                  </a>
             </div>

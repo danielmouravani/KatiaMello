@@ -1,0 +1,8 @@
+# robots.txt for Centro de Saúde Ocular Katia Mello
+# https://centrokatiamello.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://centrokatiamello.com.br/sitemap.xml

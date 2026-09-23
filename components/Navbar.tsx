@@ -42,6 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
               onNavigate('home');
             }}
             className="flex items-center gap-2 focus:outline-none"
+            aria-label="Centro de Saúde Ocular Katia Mello - Página Inicial"
           >
              <div className="bg-white py-1.5 px-3 rounded-lg shadow-lg shadow-black/20">
                <img 
@@ -70,6 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
             <button 
               onClick={() => setIsModalOpen(true)}
               className="flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 border border-brand-400/20 cursor-pointer"
+              aria-label="Agendar consulta agora"
             >
               <Phone size={16} />
               Agendar Agora
@@ -78,8 +80,10 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
           {/* Mobile Toggle */}
           <button 
-            className="md:hidden text-white" 
+            className="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-400" 
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? "Fechar menu principal" : "Abrir menu principal"}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>

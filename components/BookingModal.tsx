@@ -23,6 +23,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
             <button 
                 onClick={onClose}
                 className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 hover:bg-slate-100 p-2 rounded-full transition-colors"
+                aria-label="Fechar modal de agendamento"
             >
                 <X size={20} />
             </button>
