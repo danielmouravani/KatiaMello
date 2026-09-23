@@ -17,13 +17,13 @@ const BookingSection: React.FC = () => {
   return (
     <section id="agendamento" className="py-24 bg-white relative overflow-hidden">
         {/* Decorative blobs */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-50 rounded-full blur-3xl opacity-60 translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl opacity-60 -translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-50 rounded-full blur-3xl opacity-60 translate-x-1/3 -translate-y-1/3 pointer-events-none" aria-hidden="true"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl opacity-60 -translate-x-1/3 translate-y-1/3 pointer-events-none" aria-hidden="true"></div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-16 shadow-2xl overflow-hidden relative">
                 {/* Background pattern */}
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]" aria-hidden="true"></div>
                 
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
                     <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
@@ -41,14 +41,15 @@ const BookingSection: React.FC = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
                             <button 
                                 onClick={openModal}
-                                className="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30 group"
+                                className="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-600/30 group cursor-pointer"
+                                aria-label="Abrir modal para agendar consulta"
                             >
                                 <Calendar className="w-5 h-5" />
                                 Agendar Consulta
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
                         </div>
-                        <p className="text-slate-500 text-sm">
+                        <p className="text-slate-400 text-sm">
                             * Atendimento rápido e confirmação imediata.
                         </p>
                     </div>
@@ -112,13 +113,17 @@ const BookingSection: React.FC = () => {
                                      </div>
                                  </div>
 
-                                 <button onClick={openModal} className="block w-full bg-slate-900 text-white text-center py-3 rounded-lg font-bold text-sm hover:bg-slate-800 transition-colors mt-4">
+                                 <button 
+                                     onClick={openModal} 
+                                     className="block w-full bg-slate-900 text-white text-center py-3 rounded-lg font-bold text-sm hover:bg-slate-800 transition-colors mt-4 cursor-pointer"
+                                     aria-label="Agendar consulta no calendário interativo"
+                                 >
                                      Agendar Agora
                                  </button>
                              </div>
                         </div>
                         {/* Floating elements behind */}
-                        <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-brand-500/20 rounded-3xl blur-2xl"></div>
+                        <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-brand-500/20 rounded-3xl blur-2xl pointer-events-none" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
@@ -131,7 +136,7 @@ const BookingSection: React.FC = () => {
                     { icon: CheckCircle2, title: "Praticidade Total", desc: "Gerencie, reagende ou cancele sua consulta online se necessário." }
                 ].map((feature, i) => (
                     <div key={i} className="flex flex-col items-center text-center">
-                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-600 shadow-lg mb-4 border border-slate-100">
+                        <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-700 shadow-lg mb-4 border border-slate-100">
                             <feature.icon size={24} />
                         </div>
                         <h3 className="font-bold text-slate-900 mb-2">{feature.title}</h3>

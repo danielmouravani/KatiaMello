@@ -8,7 +8,7 @@ const Partners: React.FC = () => {
   return (
     <section id="partners" className="py-20 bg-white border-t border-slate-100 overflow-hidden relative">
       <div className="container mx-auto px-4 md:px-6 mb-12 text-center">
-        <h2 className="text-brand-600 font-bold tracking-wider uppercase text-sm mb-3">Convênios</h2>
+        <h2 className="text-brand-700 font-bold tracking-wider uppercase text-sm mb-3">Convênios</h2>
         <h3 className="text-3xl md:text-4xl font-display font-bold text-slate-900">
           Planos de Saúde Aceitos
         </h3>

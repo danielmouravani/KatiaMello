@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Centro de Saúde Ocular Katia Mello",
+  "description": "Clínica oftalmológica especializada em cirurgia de catarata, cirurgia refrativa, setor de córnea e exames diagnósticos em Duque de Caxias - RJ.",
+  "version": "1.0.0",
+  "homepage": "https://centrokatiamello.com.br",
+  "contact": {
+    "email": "setoratendimento@centrokatiamello.com.br",
+    "phone": "+552133447321"
+  },
+  "capabilities": [
+    {
+      "name": "Agendamento de Consultas",
+      "description": "Agendamento de consultas e exames oftalmológicos via WhatsApp e Doctoralia",
+      "type": "booking",
+      "url": "https://centrokatiamello.com.br/#agendamento"
+    },
+    {
+      "name": "Informações Clínicas e Exames",
+      "description": "Catálogo de procedimentos cirúrgicos e exames oftalmológicos",
+      "type": "medical-services",
+      "url": "https://centrokatiamello.com.br/#exames"
+    }
+  ],
+  "resources": [
+    {
+      "name": "llms.txt",
+      "type": "text/markdown",
+      "url": "https://centrokatiamello.com.br/llms.txt"
+    },
+    {
+      "name": "sitemap.xml",
+      "type": "application/xml",
+      "url": "https://centrokatiamello.com.br/sitemap.xml"
+    }
+  ]
+}

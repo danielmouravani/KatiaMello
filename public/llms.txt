@@ -1,0 +1,29 @@
+# Centro de Saúde Ocular Katia Mello
+
+> Clínica oftalmológica de excelência e referência em Duque de Caxias - RJ, com mais de 25 anos de dedicação à saúde ocular, tecnologia diagnóstica de ponta e cirurgias avançadas.
+
+## Sobre a Clínica
+
+O Centro de Saúde Ocular Katia Mello é especializado no diagnóstico, acompanhamento clínico e tratamento cirúrgico de diversas patologias oculares. Localizado no centro de Duque de Caxias, conta com corpo clínico experiente liderado pela Dra. Katia Mello.
+
+- Endereço: Av. Presidente Vargas, 132 - Edifício Fertonani, Centro, Duque de Caxias - RJ
+- Telefone: (21) 3344-7321
+- WhatsApp: (21) 98744-5827
+- E-mail: setoratendimento@centrokatiamello.com.br
+- Horário de atendimento: Segunda a Sexta das 08h às 18h; Sábados das 08h às 12h
+
+## Especialidades e Serviços Principais
+
+- [Cirurgia de Catarata](https://centrokatiamello.com.br/#catarata): Cirurgia moderna por facoemulsificação com implante de lentes intraoculares premium (monofocais, tóricas e multifocais).
+- [Cirurgia Refrativa e Córnea](https://centrokatiamello.com.br/#refrativa): Correção a laser para miopia, astigmatismo e hipermetropia (LASIK e PRK), além de tratamentos especializados para ceratocone (Crosslinking e anel intraestromal).
+- [Oculoplástica](https://centrokatiamello.com.br/#oculoplastica): Procedimentos funcionais e estéticos das pálpebras, incluindo blefaroplastia, correção de ptose, entrópio e ectrópio.
+- [Exames Diagnósticos](https://centrokatiamello.com.br/#exames): Exames oftalmológicos completos, incluindo tomografia de coerência óptica (OCT), topografia de córnea, paquimetria, campimetria computadorizada, mapeamento de retina e microscopia especular.
+- [Especialidades Gerais](https://centrokatiamello.com.br/#specialties): Atendimento especializado em glaucoma, retina e vítreo, córnea, catarata e adaptação de lentes de contato.
+- [Convênios Atendidos](https://centrokatiamello.com.br/#partners): Atendimento aos principais planos de saúde do Rio de Janeiro (Amil, Bradesco Saúde, SulAmérica, Porto Seguro, Golden Cross, Care Plus, Petrobras, Geap, entre outros).
+
+## Links Úteis
+
+- [Página Inicial](https://centrokatiamello.com.br/): Informações gerais, depoimentos e agendamento de consultas.
+- [Agendamento Online](https://centrokatiamello.com.br/#agendamento): Agende consultas e exames de forma rápida.
+- [Política de Privacidade](https://centrokatiamello.com.br/#politica-de-privacidade): Termos de proteção de dados e privacidade em conformidade com a LGPD.
+- [Termos de Uso](https://centrokatiamello.com.br/#termos-de-uso): Diretrizes e termos para uso da plataforma e serviços.

@@ -71,14 +71,12 @@
       ]
     }
     </script>
-    <!-- Resource Hints & DNS Prefetch for critical domains -->
+    <!-- Resource Hints: exactly 2 critical preconnects (< 4 limit recommended by Lighthouse) -->
     <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
     <link rel="dns-prefetch" href="https://connect.facebook.net" />
 
     <!-- Preload Critical LCP Hero Image -->
@@ -175,11 +173,11 @@
 
         if ('requestIdleCallback' in window) {
           window.requestIdleCallback(function() {
-            setTimeout(loadThirdPartyScripts, 2000);
+            setTimeout(loadThirdPartyScripts, 3500);
           });
         } else {
           window.addEventListener('load', function() {
-            setTimeout(loadThirdPartyScripts, 2500);
+            setTimeout(loadThirdPartyScripts, 4000);
           });
         }
       })();

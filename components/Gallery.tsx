@@ -6,14 +6,14 @@ const Gallery: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row gap-12 items-center mb-12">
             <div className="md:w-1/3">
-                 <h2 className="text-brand-600 font-bold tracking-wider uppercase text-sm mb-2">Estrutura</h2>
+                 <h2 className="text-brand-700 font-bold tracking-wider uppercase text-sm mb-2">Estrutura</h2>
                  <h3 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-4">Conforto e Tecnologia</h3>
                  <p className="text-slate-600 mb-6">
                      Um ambiente projetado para oferecer bem-estar e segurança durante todo o seu atendimento.
                  </p>
                  <a 
                    href="#footer" 
-                   className="text-brand-600 font-bold hover:underline"
+                   className="text-brand-700 font-bold hover:text-brand-800 hover:underline"
                    aria-label="Visite nossa unidade no centro de Duque de Caxias"
                  >
                      Visite nossa unidade

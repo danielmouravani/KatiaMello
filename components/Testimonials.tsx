@@ -19,11 +19,11 @@ const Testimonials: React.FC = () => {
 
       <div className="container mx-auto px-4 md:px-6 relative z-10 mb-16">
         <div className="text-center max-w-4xl mx-auto">
-          <span className="text-brand-600 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Depoimentos</span>
+          <span className="text-brand-700 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Depoimentos</span>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6">
             O que dizem nossos pacientes
           </h2>
-          <p className="text-slate-500 text-lg">
+          <p className="text-slate-600 text-lg">
             Histórias reais de quem transformou sua visão e qualidade de vida conosco.
           </p>
         </div>
@@ -52,7 +52,8 @@ const Testimonials: React.FC = () => {
           href="https://www.google.com/maps" 
           target="_blank" 
           rel="noreferrer" 
-          className="inline-flex items-center gap-2 text-brand-600 font-bold hover:text-brand-700 hover:underline underline-offset-4 transition-colors"
+          className="inline-flex items-center gap-2 text-brand-700 font-bold hover:text-brand-800 hover:underline underline-offset-4 transition-colors"
+          aria-label="Ver mais avaliações de pacientes no Google"
         >
             Ver mais avaliações no Google
         </a>
@@ -83,12 +84,12 @@ const TestimonialCard: React.FC<{ item: typeof TESTIMONIALS[0] }> = ({ item }) =
       </div>
       
       <div className="flex items-center gap-3 pt-3 border-t border-slate-50">
-        <div className="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center text-brand-600 font-bold text-sm border border-brand-100">
+        <div className="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center text-brand-700 font-bold text-sm border border-brand-100">
            {item.name.charAt(0)}
         </div>
         <div>
           <p className="font-bold text-slate-900 text-sm">{item.name}</p>
-          <p className="text-xs text-slate-400 uppercase tracking-wide">Paciente Verificado</p>
+          <p className="text-xs text-slate-600 font-medium uppercase tracking-wide">Paciente Verificado</p>
         </div>
       </div>
     </div>

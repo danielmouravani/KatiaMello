@@ -98,12 +98,12 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         </div>
       </div>
 
-      <div className="border-t border-slate-800 py-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
+      <div className="border-t border-slate-800 py-8 text-center text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
         <p>&copy; {new Date().getFullYear()} Centro de Saúde Ocular Katia Mello. Todos os direitos reservados.</p>
-        <a href="#politica-de-privacidade" onClick={(e) => { e.preventDefault(); onNavigate('privacy'); }} className="text-slate-400 hover:text-brand-400 underline transition-colors">
+        <a href="#politica-de-privacidade" onClick={(e) => { e.preventDefault(); onNavigate('privacy'); }} className="text-slate-300 hover:text-brand-300 underline transition-colors" aria-label="Acessar Política de Privacidade">
           Política de Privacidade
         </a>
-        <a href="#termos-de-uso" onClick={(e) => { e.preventDefault(); onNavigate('terms'); }} className="text-slate-400 hover:text-brand-400 underline transition-colors">
+        <a href="#termos-de-uso" onClick={(e) => { e.preventDefault(); onNavigate('terms'); }} className="text-slate-300 hover:text-brand-300 underline transition-colors" aria-label="Acessar Termos de Uso">
           Termos de Uso
         </a>
       </div>

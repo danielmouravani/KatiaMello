@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-600 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-500/30 cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-600/30 cursor-pointer"
               aria-label="Agendar consulta no Centro Katia Mello"
             >
               Agendar Consulta
@@ -56,12 +56,17 @@ const Hero: React.FC = () => {
 
           <div className="flex items-center gap-4 pt-4">
             <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
+              {[
+                { id: 1, img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&h=80&q=70" },
+                { id: 2, img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=70" },
+                { id: 3, img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&h=80&q=70" },
+                { id: 4, img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=70" }
+              ].map((patient) => (
                 <img 
-                  key={i} 
-                  src={`https://i.pravatar.cc/100?img=${i + 10}`} 
-                  alt={`Paciente atendido ${i}`} 
-                  className="w-10 h-10 rounded-full border-2 border-slate-900"
+                  key={patient.id} 
+                  src={patient.img} 
+                  alt={`Paciente atendido ${patient.id}`} 
+                  className="w-10 h-10 rounded-full border-2 border-slate-900 object-cover"
                   loading="lazy"
                   decoding="async"
                   width="40"

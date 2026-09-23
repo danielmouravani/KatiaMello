@@ -10,13 +10,17 @@ export default defineConfig({
   },
   build: {
     target: 'es2020',
+    minify: 'esbuild',
+    cssMinify: true,
     cssCodeSplit: true,
+    modulePreload: {
+      polyfill: false,
+    },
     chunkSizeWarningLimit: 600,
     rollupOptions: {
       output: {
         manualChunks: {
           'vendor-react': ['react', 'react-dom'],
-          'vendor-icons': ['lucide-react'],
         },
       },
     },
