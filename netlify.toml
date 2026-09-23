@@ -47,6 +47,12 @@
     Content-Type = "application/json; charset=UTF-8"
     Cache-Control = "public, max-age=86400, must-revalidate"
 
+[[headers]]
+  for = "/.well-known/ai-catalog.json"
+  [headers.values]
+    Content-Type = "application/json; charset=UTF-8"
+    Cache-Control = "public, max-age=86400, must-revalidate"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

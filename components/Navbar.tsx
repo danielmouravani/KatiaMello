@@ -46,7 +46,9 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
           >
              <div className="bg-white py-1.5 px-3 rounded-lg shadow-lg shadow-black/20">
                <img 
-                 src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_360/v1781611650/rb2qde4nchvgvoiowvli.png" 
+                 src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto:eco,w_195/v1781611650/rb2qde4nchvgvoiowvli.png" 
+                 srcSet="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto:eco,w_195/v1781611650/rb2qde4nchvgvoiowvli.png 1x, https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto:eco,w_390/v1781611650/rb2qde4nchvgvoiowvli.png 2x"
+                 sizes="(max-width: 768px) 150px, 195px"
                  alt="Centro de Saúde Ocular Katia Mello" 
                  className="h-10 w-auto object-contain"
                  width="150"
