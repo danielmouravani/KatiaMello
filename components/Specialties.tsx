@@ -43,7 +43,7 @@ const Specialties: React.FC<SpecialtiesProps> = ({ onNavigate }) => {
                     e.preventDefault();
                     if (spec.title === 'Catarata') {
                       onNavigate('cataract');
-                    } else if (spec.title === 'Cirurgia Refrativa') {
+                    } else if (spec.title === 'Cirurgia Refrativa' || spec.title === 'Córnea') {
                       onNavigate('refractive');
                     } else if (spec.title === 'Oculoplástica') {
                       onNavigate('oculoplastics');

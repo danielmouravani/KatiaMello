@@ -4,30 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Centro de Saúde Ocular Katia Mello</title>
-    <meta name="description" content="Centro de excelência em saúde ocular, oferecendo tratamentos avançados para catarata, córnea e muito mais. Agende sua consulta." />
-    
-    <!-- SEO Básico & Canonical -->
-    <link rel="canonical" href="https://centrokatiamello.com.br/" />
-    
-    <!-- OpenGraph (Redes Sociais) -->
-    <meta property="og:title" content="Centro de Saúde Ocular Katia Mello" />
-    <meta property="og:description" content="Centro de excelência em saúde ocular, oferecendo tratamentos avançados para catarata, córnea e muito mais. Agende sua consulta." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://centrokatiamello.com.br/" />
-    <meta property="og:image" content="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781615566/nn3fq0a5ygqt3kojye8t.png" />
-    
-    <!-- Schema.org (Dados Estruturados para o Google) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "Centro de Saúde Ocular Katia Mello",
-      "description": "Clínica oftalmológica especializada no tratamento de catarata, córnea e saúde ocular.",
-      "url": "https://centrokatiamello.com.br/",
-      "telephone": "+55-21-99999-9999",
-      "medicalSpecialty": ["Optometry", "Ophthalmology"]
-    }
-    </script>
+    <!-- Resource Hints & DNS Prefetch for critical domains -->
+    <link rel="preconnect" href="https://res.cloudinary.com" crossorigin />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin />
+    <link rel="dns-prefetch" href="https://connect.facebook.net" />
+
+    <!-- Preload Critical LCP Hero Image -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_800/v1780754865/wmotptj20txizvxa6wui.jpg"
+      fetchpriority="high"
+    />
 
     <!-- Prevent TypeError: Cannot set property fetch of #<Window> which has only a getter -->
     <script>
@@ -49,39 +42,81 @@
         }
       })();
     </script>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MMXB767W');</script>
-    <!-- End Google Tag Manager -->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11562349104">
-    </script>
+    <!-- Third-Party Tracking Optimization (INP & LCP preservation):
+         Stubs are created synchronously so no events are lost.
+         External scripts are deferred until browser idle or first user interaction. -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'AW-11562349104');
-    </script>
+      // Meta Pixel stub
+      !function(f,b,e,v,n,t,s){
+        if(f.fbq)return;
+        n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!1;n.version='2.0';n.queue=[];
+      }(window, document);
 
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '3943016669303317');
-      fbq('track', 'PageView');
+      (function() {
+        var scriptsLoaded = false;
+        function loadThirdPartyScripts() {
+          if (scriptsLoaded) return;
+          scriptsLoaded = true;
+
+          // 1. Google Tag Manager
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-MMXB767W');
+
+          // 2. Google Tag (gtag.js AW-11562349104)
+          var gtagScript = document.createElement('script');
+          gtagScript.async = true;
+          gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-11562349104';
+          document.head.appendChild(gtagScript);
+          gtag('config', 'AW-11562349104');
+
+          // 3. Meta Pixel (fbevents.js)
+          var fbScript = document.createElement('script');
+          fbScript.async = true;
+          fbScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
+          fbScript.onload = function() {
+            try {
+              if (window.fbq) {
+                window.fbq.loaded = true;
+                window.fbq('init', '3943016669303317');
+                window.fbq('track', 'PageView');
+              }
+            } catch(e) {}
+          };
+          document.head.appendChild(fbScript);
+        }
+
+        var events = ['scroll', 'touchstart', 'pointerdown', 'keydown', 'mousemove'];
+        function triggerLoad() {
+          loadThirdPartyScripts();
+          events.forEach(function(ev) {
+            window.removeEventListener(ev, triggerLoad, { passive: true });
+          });
+        }
+
+        events.forEach(function(ev) {
+          window.addEventListener(ev, triggerLoad, { passive: true, once: true });
+        });
+
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(function() {
+            setTimeout(loadThirdPartyScripts, 2000);
+          });
+        } else {
+          window.addEventListener('load', function() {
+            setTimeout(loadThirdPartyScripts, 2500);
+          });
+        }
+      })();
     </script>
-    <!-- End Meta Pixel Code -->
 
     <script>
       // Shim process to prevent ReferenceError in browser environments
@@ -144,23 +179,6 @@
     src="https://www.facebook.com/tr?id=3943016669303317&ev=PageView&noscript=1"
     alt="" /></noscript>
     <!-- End Meta Pixel (noscript) -->
-    
-    <!-- Fallback SEO para robôs que não executam JavaScript -->
-    <noscript>
-      <div style="padding: 20px;">
-        <h1>Centro de Saúde Ocular Katia Mello</h1>
-        <h2>Excelência em Oftalmologia e Saúde Ocular</h2>
-        <p>Centro de excelência em saúde ocular, oferecendo tratamentos avançados para catarata, córnea, plástica ocular, glaucoma e muito mais.</p>
-        <h2>Tratamentos e Especialidades</h2>
-        <ul>
-          <li><a href="https://centrokatiamello.com.br/catarata">Cirurgia de Catarata</a></li>
-          <li><a href="https://centrokatiamello.com.br/refrativa">Setor de Córnea e Doenças da Superfície Ocular</a></li>
-          <li><a href="https://centrokatiamello.com.br/exames">Exames Oftalmológicos</a></li>
-          <li><a href="https://centrokatiamello.com.br/oculoplastica">Plástica Ocular</a></li>
-        </ul>
-      </div>
-    </noscript>
-
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

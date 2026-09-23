@@ -11,9 +11,10 @@ const Hero: React.FC = () => {
       {/* Background Decor */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2080&auto=format&fit=crop" 
+          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=70" 
           alt="Advanced Eye Care Technology" 
           className="w-full h-full object-cover opacity-30"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/40"></div>
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-brand-500/20 rounded-full blur-3xl"></div>
@@ -59,6 +60,10 @@ const Hero: React.FC = () => {
                   src={`https://i.pravatar.cc/100?img=${i + 10}`} 
                   alt="User" 
                   className="w-10 h-10 rounded-full border-2 border-slate-900"
+                  loading="lazy"
+                  decoding="async"
+                  width="40"
+                  height="40"
                 />
               ))}
             </div>
@@ -74,9 +79,14 @@ const Hero: React.FC = () => {
         <div className="relative hidden md:block">
            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/20 border border-slate-700/50 group">
              <img 
-              src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1780754865/wmotptj20txizvxa6wui.jpg" 
+              src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_800/v1780754865/wmotptj20txizvxa6wui.jpg" 
               alt="Centro Katia Mello" referrerPolicy="no-referrer" 
               className="w-full h-[500px] object-cover object-top transform transition-transform duration-700 group-hover:scale-105"
+              loading="eager"
+              {...{ fetchpriority: 'high' }}
+              decoding="async"
+              width="600"
+              height="500"
              />
              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end px-8 pb-24">
                <div className="text-white">

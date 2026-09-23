@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -9,16 +9,18 @@ import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Partners from './components/Partners';
 import Footer from './components/Footer';
-import CataractPage from './components/CataractPage';
-import RefractivePage from './components/RefractivePage';
-import OculoplasticsPage from './components/OculoplasticsPage';
-import ExamsPage from './components/ExamsPage';
 import BookingSection from './components/BookingSection';
-import SurveyPage from './components/SurveyPage';
-import PrivacyPolicyPage from './components/PrivacyPolicyPage';
-import TermsOfUsePage from './components/TermsOfUsePage';
 import { Phone, X } from 'lucide-react';
 import { WHATSAPP_LINK } from './constants';
+
+// Code-splitting para reduzir bundle inicial e eliminar bloqueio da Main Thread (INP)
+const CataractPage = lazy(() => import('./components/CataractPage'));
+const RefractivePage = lazy(() => import('./components/RefractivePage'));
+const OculoplasticsPage = lazy(() => import('./components/OculoplasticsPage'));
+const ExamsPage = lazy(() => import('./components/ExamsPage'));
+const SurveyPage = lazy(() => import('./components/SurveyPage'));
+const PrivacyPolicyPage = lazy(() => import('./components/PrivacyPolicyPage'));
+const TermsOfUsePage = lazy(() => import('./components/TermsOfUsePage'));
 
 const App: React.FC = () => {
   // 1. Inicializa o estado lendo a URL IMEDIATAMENTE.
@@ -29,7 +31,7 @@ const App: React.FC = () => {
     const path = window.location.pathname.toLowerCase();
 
     if (hash.includes('catarata') || path.includes('catarata')) return 'cataract';
-    if (hash.includes('refrativa') || path.includes('refrativa')) return 'refractive';
+    if (hash.includes('refrativa') || path.includes('refrativa') || hash.includes('cornea') || path.includes('cornea')) return 'refractive';
     if (hash.includes('exames') || path.includes('exames')) return 'exams';
     if (hash.includes('oculoplastica') || path.includes('oculoplastica')) return 'oculoplastics';
     if (hash.includes('pesquisa') || path.includes('pesquisa')) return 'survey';
@@ -58,7 +60,7 @@ const App: React.FC = () => {
 
       if (hash.includes('catarata') || path.includes('catarata')) {
         newPage = 'cataract';
-      } else if (hash.includes('refrativa') || path.includes('refrativa')) {
+      } else if (hash.includes('refrativa') || path.includes('refrativa') || hash.includes('cornea') || path.includes('cornea')) {
         newPage = 'refractive';
       } else if (hash.includes('exames') || path.includes('exames')) {
         newPage = 'exams';
@@ -152,20 +154,21 @@ const App: React.FC = () => {
             <Testimonials />
             <BookingSection />
           </>
-        ) : currentPage === 'cataract' ? (
-          <CataractPage onNavigate={navigateTo} />
-        ) : currentPage === 'refractive' ? (
-          <RefractivePage onNavigate={navigateTo} />
-        ) : currentPage === 'oculoplastics' ? (
-          <OculoplasticsPage onNavigate={navigateTo} />
-        ) : currentPage === 'survey' ? (
-          <SurveyPage onNavigate={navigateTo} />
-        ) : currentPage === 'privacy' ? (
-          <PrivacyPolicyPage onNavigate={navigateTo} />
-        ) : currentPage === 'terms' ? (
-          <TermsOfUsePage onNavigate={navigateTo} />
         ) : (
-          <ExamsPage onNavigate={navigateTo} />
+          <Suspense fallback={
+            <div className="min-h-screen pt-32 flex flex-col items-center justify-center bg-slate-900 text-white">
+              <div className="w-10 h-10 border-4 border-brand-500 border-t-transparent rounded-full animate-spin mb-4"></div>
+              <p className="text-slate-400 text-sm">Carregando conteúdo...</p>
+            </div>
+          }>
+            {currentPage === 'cataract' && <CataractPage onNavigate={navigateTo} />}
+            {currentPage === 'refractive' && <RefractivePage onNavigate={navigateTo} />}
+            {currentPage === 'oculoplastics' && <OculoplasticsPage onNavigate={navigateTo} />}
+            {currentPage === 'survey' && <SurveyPage onNavigate={navigateTo} />}
+            {currentPage === 'privacy' && <PrivacyPolicyPage onNavigate={navigateTo} />}
+            {currentPage === 'terms' && <TermsOfUsePage onNavigate={navigateTo} />}
+            {currentPage === 'exams' && <ExamsPage onNavigate={navigateTo} />}
+          </Suspense>
         )}
       </main>
       

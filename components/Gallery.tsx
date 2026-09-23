@@ -18,13 +18,37 @@ const Gallery: React.FC = () => {
             
             <div className="md:w-2/3 grid grid-cols-12 gap-4 h-96 w-full">
                 <div className="col-span-8 row-span-2 rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611731/qkz3s5rkkinqimwcb3qf.jpg" alt="Estrutura da Clínica Principal" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img 
+                      src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_800/v1781611731/qkz3s5rkkinqimwcb3qf.jpg" 
+                      alt="Estrutura da Clínica Principal" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                      loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="600"
+                    />
                 </div>
                 <div className="col-span-4 row-span-1 rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611731/kk6m7nuckvzosoxg0cd5.jpg" alt="Equipamentos Modernos" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img 
+                      src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611731/kk6m7nuckvzosoxg0cd5.jpg" 
+                      alt="Equipamentos Modernos" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                      loading="lazy"
+                      decoding="async"
+                      width="500"
+                      height="300"
+                    />
                 </div>
                 <div className="col-span-4 row-span-1 rounded-2xl overflow-hidden shadow-lg relative group">
-                    <img src="https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611731/v0w25pk2lyhmkayf2dql.jpg" alt="Ambiente Confortável" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img 
+                      src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611731/v0w25pk2lyhmkayf2dql.jpg" 
+                      alt="Ambiente Confortável" 
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                      loading="lazy"
+                      decoding="async"
+                      width="500"
+                      height="300"
+                    />
                 </div>
             </div>
         </div>

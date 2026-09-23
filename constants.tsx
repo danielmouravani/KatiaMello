@@ -65,33 +65,33 @@ export const DOCTORS: Doctor[] = [
   {
     name: "Dra. Katia Mello",
     specialty: "Catarata",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/k5fem1vazulvsb9awhac.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/k5fem1vazulvsb9awhac.jpg"
   },
   {
     name: "Dra. Fabia Crespo",
     specialty: "Glaucoma",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611527/cocyetc5l0bin5s99gwu.jpg",
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611527/cocyetc5l0bin5s99gwu.jpg",
     crm: "52838446"
   },
   {
     name: "Dra. Claudia Morgado",
     specialty: "Córnea",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611527/wvy94bshgxcmfu6uuvad.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611527/wvy94bshgxcmfu6uuvad.jpg"
   },
   {
     name: "Dr. Rodrigo Borges",
     specialty: "Córnea",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611527/n9sudoqdnklxacxrj59d.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1788182614/nzea72jrt8jpl12qnou4.jpg"
   },
   {
     name: "Dra. Marceli Bastos",
     specialty: "Oftalmologista",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/nhfg4lqcwjubgbwh1ofp.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/nhfg4lqcwjubgbwh1ofp.jpg"
   },
   {
     name: "Dra. Alana Reis",
     specialty: "Glaucoma",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/aebceymk1wp6m5anugjs.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/aebceymk1wp6m5anugjs.jpg"
   },
   {
     name: "Dr. Rodrigo Pegado",
@@ -101,12 +101,12 @@ export const DOCTORS: Doctor[] = [
   {
     name: "Dra. Adriana Franco",
     specialty: "Retina",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/elbuqhnwiogiq51sxdvz.jpg"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/elbuqhnwiogiq51sxdvz.jpg"
   },
   {
     name: "Dra. Julia Soares",
     specialty: "Córnea",
-    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1781611528/lyhsqchommpwjvikoawu.png"
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/lyhsqchommpwjvikoawu.png"
   }
 ];
 
@@ -177,21 +177,21 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const PARTNERS: Partner[] = [
-  { name: "Amil", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/fnwpq1ucyz0pbwdhmdlr.png" },
-  { name: "Bradesco Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/wwpogflig5bj8hhok0eg.png" },
+  { name: "Amil", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/fnwpq1ucyz0pbwdhmdlr.png" },
+  { name: "Bradesco Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632838/wwpogflig5bj8hhok0eg.png" },
   { name: "Care Plus", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/care-plus-Aq2WoBOk3yHN0jO9.png" },
   { name: "Caurj", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/caurj-AzGX7rqGkEUkkqB1.png" },
-  { name: "Real Grandeza", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/ldnkjhh0ylccfo3avtdv.png" },
-  { name: "Geap Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/fduj6yfoqx7y0a5gp9ym.png" },
+  { name: "Real Grandeza", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632838/ldnkjhh0ylccfo3avtdv.png" },
+  { name: "Geap Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/fduj6yfoqx7y0a5gp9ym.png" },
   { name: "Marinha do Brasil", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/marinha-A85e4po5gZIZDKxD.png" },
-  { name: "Omint", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/vs135hspbkirkv2yovgi.png" },
-  { name: "Porto Seguro", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632837/pgcm4pecinf2bwcc062o.png" },
-  { name: "Saúde Caixa", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783776787/ww1nvrkbvwjwolkzwnq1.png" },
-  { name: "Saúde Petrobras", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783776787/ws9fuwqivbij7zz38tre.png" },
-  { name: "SulAmérica", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783632838/hwow2fudufnjufcnfjw3.png" },
+  { name: "Omint", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/vs135hspbkirkv2yovgi.png" },
+  { name: "Porto Seguro", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/pgcm4pecinf2bwcc062o.png" },
+  { name: "Saúde Caixa", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783776787/ww1nvrkbvwjwolkzwnq1.png" },
+  { name: "Saúde Petrobras", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783776787/ws9fuwqivbij7zz38tre.png" },
+  { name: "SulAmérica", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632838/hwow2fudufnjufcnfjw3.png" },
   { name: "Assefaz", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assffaz-Yyv97ozGbPsyr3jz.png" },
   { name: "Assim Saúde", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assim-AR0LbJ6qk0c8pWwn.png" },
-  { name: "Mediservice", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/v1783776787/i1rtspmqsxbohrsmmk9c.png" },
+  { name: "Mediservice", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783776787/i1rtspmqsxbohrsmmk9c.png" },
   { name: "Nuclep", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/nuclep-d951gpRv03F6naGD.png" },
 ];
 

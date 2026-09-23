@@ -92,7 +92,10 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                       src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/unnamed-pPL6tHtNi8aqAr0W.jpg" 
                       alt="Olho com catarata" 
                       className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl"
-
+                      loading="lazy"
+                      decoding="async"
+                      width="450"
+                      height="450"
                     />
                     <div className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
                       <p className="text-white font-medium text-sm flex items-center gap-2">
@@ -145,8 +148,24 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
             
             <div className="lg:w-1/2 relative">
                <div className="grid grid-cols-2 gap-4">
-                 <img src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-1-d951pxJxqWi2aJ82.jpeg" className="rounded-2xl shadow-lg w-full h-64 object-cover" alt="Equipamento" />
-                 <img src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-2-m6LZvBnB6asgLZqa.jpeg" className="rounded-2xl shadow-lg w-full h-64 object-cover mt-8" alt="Consultório" />
+                 <img 
+                   src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-1-d951pxJxqWi2aJ82.jpeg" 
+                   className="rounded-2xl shadow-lg w-full h-64 object-cover" 
+                   alt="Equipamento" 
+                   loading="lazy"
+                   decoding="async"
+                   width="300"
+                   height="256"
+                 />
+                 <img 
+                   src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-2-m6LZvBnB6asgLZqa.jpeg" 
+                   className="rounded-2xl shadow-lg w-full h-64 object-cover mt-8" 
+                   alt="Consultório" 
+                   loading="lazy"
+                   decoding="async"
+                   width="300"
+                   height="256"
+                 />
                </div>
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-600 text-white p-6 rounded-2xl shadow-xl text-center min-w-[200px]">
                  <p className="text-4xl font-bold">+25</p>

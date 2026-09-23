@@ -29,6 +29,10 @@ const Partners: React.FC = () => {
                   src={partner.logo} 
                   alt={partner.name} 
                   className="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                  decoding="async"
+                  width="160"
+                  height="64"
                   referrerPolicy="no-referrer"
                 />
               </div>
