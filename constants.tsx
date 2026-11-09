@@ -96,7 +96,7 @@ export const DOCTORS: Doctor[] = [
   {
     name: "Dr. Rodrigo Pegado",
     specialty: "Retina",
-    image: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/dr-rodrigo-pegado-YD0lpx432bU94ZzY.jpg"
+    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80"
   },
   {
     name: "Dra. Adriana Franco",
@@ -179,20 +179,14 @@ export const TESTIMONIALS: Testimonial[] = [
 export const PARTNERS: Partner[] = [
   { name: "Amil", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/fnwpq1ucyz0pbwdhmdlr.png" },
   { name: "Bradesco Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632838/wwpogflig5bj8hhok0eg.png" },
-  { name: "Care Plus", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/care-plus-Aq2WoBOk3yHN0jO9.png" },
-  { name: "Caurj", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/caurj-AzGX7rqGkEUkkqB1.png" },
   { name: "Real Grandeza", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632838/ldnkjhh0ylccfo3avtdv.png" },
   { name: "Geap Saúde", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/fduj6yfoqx7y0a5gp9ym.png" },
-  { name: "Marinha do Brasil", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/marinha-A85e4po5gZIZDKxD.png" },
   { name: "Omint", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/vs135hspbkirkv2yovgi.png" },
   { name: "Porto Seguro", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632837/pgcm4pecinf2bwcc062o.png" },
   { name: "Saúde Caixa", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783776787/ww1nvrkbvwjwolkzwnq1.png" },
   { name: "Saúde Petrobras", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783776787/ws9fuwqivbij7zz38tre.png" },
   { name: "SulAmérica", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783632838/hwow2fudufnjufcnfjw3.png" },
-  { name: "Assefaz", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assffaz-Yyv97ozGbPsyr3jz.png" },
-  { name: "Assim Saúde", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/assim-AR0LbJ6qk0c8pWwn.png" },
   { name: "Mediservice", logo: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_240/v1783776787/i1rtspmqsxbohrsmmk9c.png" },
-  { name: "Nuclep", logo: "https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/nuclep-d951gpRv03F6naGD.png" },
 ];
 
 export const LENSES: Lens[] = [

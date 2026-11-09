@@ -89,8 +89,11 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                  <div className="absolute -inset-1 bg-gradient-to-r from-brand-400 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
                  <div className="relative bg-slate-800 rounded-3xl p-2 shadow-2xl">
                     <img 
-                      src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/unnamed-pPL6tHtNi8aqAr0W.jpg" 
-                      alt="Olho com catarata" 
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcQ2LUOqx5D04STX4di3OLN4V0uQqJYipI-cGZsvbAymrjQXjAiLjOtT4&s=10" 
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = '/images/olho-com-catarata.jpg';
+                      }}
+                      alt="Olho com catarata - Opacidade no cristalino" 
                       className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl"
                       loading="lazy"
                       decoding="async"
@@ -149,18 +152,18 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
             <div className="lg:w-1/2 relative">
                <div className="grid grid-cols-2 gap-4">
                  <img 
-                   src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-1-d951pxJxqWi2aJ82.jpeg" 
+                   src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_600/v1781611731/kk6m7nuckvzosoxg0cd5.jpg" 
                    className="rounded-2xl shadow-lg w-full h-64 object-cover" 
-                   alt="Equipamento" 
+                   alt="Equipamento de cirurgia oftalmológica moderna" 
                    loading="lazy"
                    decoding="async"
                    width="300"
                    height="256"
                  />
                  <img 
-                   src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/whatsapp-image-2025-04-10-at-12.26.12-2-m6LZvBnB6asgLZqa.jpeg" 
+                   src="https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_600/v1781611731/v0w25pk2lyhmkayf2dql.jpg" 
                    className="rounded-2xl shadow-lg w-full h-64 object-cover mt-8" 
-                   alt="Consultório" 
+                   alt="Consultório e estrutura cirúrgica moderna" 
                    loading="lazy"
                    decoding="async"
                    width="300"

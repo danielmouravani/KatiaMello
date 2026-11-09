@@ -103,10 +103,13 @@ const OculoplasticsPage: React.FC<OculoplasticsPageProps> = ({ onNavigate }) => 
                  <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000"></div>
                  <div className="relative bg-slate-800 rounded-3xl p-2 shadow-2xl">
                     <img 
-                      src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/chatgpt-image-9-de-abr.-de-2026-10_55_14-C5qrYtgDvkzYhosC.png" 
+                      src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=800&q=80" 
                       alt="Oculoplástica e Vias Lacrimais" 
                       className="w-full h-[350px] md:h-[450px] object-cover rounded-2xl opacity-90"
-
+                      loading="lazy"
+                      decoding="async"
+                      width="450"
+                      height="450"
                     />
                     <div className="absolute bottom-6 right-6 bg-black/70 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
                       <p className="text-white font-medium text-sm flex items-center gap-2">
@@ -201,7 +204,7 @@ const OculoplasticsPage: React.FC<OculoplasticsPageProps> = ({ onNavigate }) => 
             <div className="lg:w-1/2 relative">
                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                  <img 
-                   src="https://assets.zyrosite.com/ALpeJ4P1RzcZJLwB/06cacdb2-57a4-4c9d-8236-c87dbbfc2300-fR3eHbdtAQCgfjCF.png" 
+                   src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" 
                    alt="Atendimento Especializado" 
                    className="w-full h-[500px] object-cover"
 
