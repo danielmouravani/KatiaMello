@@ -94,11 +94,6 @@ export const DOCTORS: Doctor[] = [
     image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/aebceymk1wp6m5anugjs.jpg"
   },
   {
-    name: "Dr. Rodrigo Pegado",
-    specialty: "Retina",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=500&q=80"
-  },
-  {
     name: "Dra. Adriana Franco",
     specialty: "Retina",
     image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/elbuqhnwiogiq51sxdvz.jpg"
