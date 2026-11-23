@@ -92,7 +92,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
              </li>
              <li className="flex items-center justify-between">
                <span className="flex items-center gap-2"><Clock size={16} /> Sábado</span>
-               <span className="text-white">08:00 - 12:00</span>
+               <span className="text-white">08:00 - 14:00</span>
              </li>
            </ul>
         </div>

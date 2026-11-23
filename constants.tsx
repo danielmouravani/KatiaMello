@@ -19,7 +19,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SPECIALTIES: Specialty[] = [
   {
     title: "Catarata",
-    description: "Cirurgia moderna com facoemulsificação e lentes premium para restaurar sua visão.",
+    description: "Avaliação e cirurgia moderna por facoemulsificação com opções de lentes intraoculares conforme indicação médica.",
     icon: Eye,
     image: "https://picsum.photos/400/300?random=1"
   },
@@ -94,6 +94,11 @@ export const DOCTORS: Doctor[] = [
     image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/aebceymk1wp6m5anugjs.jpg"
   },
   {
+    name: "Dr. Rodrigo Pegado",
+    specialty: "Retina",
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1794227945/prdvjkyahznwqcvygwhv.jpg"
+  },
+  {
     name: "Dra. Adriana Franco",
     specialty: "Retina",
     image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/elbuqhnwiogiq51sxdvz.jpg"
@@ -102,6 +107,11 @@ export const DOCTORS: Doctor[] = [
     name: "Dra. Julia Soares",
     specialty: "Córnea",
     image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1781611528/lyhsqchommpwjvikoawu.png"
+  },
+  {
+    name: "Dra. Ana Lígia",
+    specialty: "Oftalmologista",
+    image: "https://res.cloudinary.com/dm2aqydrq/image/upload/f_auto,q_auto,w_500/v1794227944/kgkdmkiuy8b5rohzfjfv.jpg"
   }
 ];
 
@@ -187,23 +197,23 @@ export const PARTNERS: Partner[] = [
 export const LENSES: Lens[] = [
   {
     title: "Lentes Monofocais",
-    description: "Corrigem a visão para uma única distância, geralmente para longe. Ideais para quem não se importa em usar óculos para leitura.",
-    features: ["Visão nítida para longe", "Tecnologia asférica", "Proteção UV"]
+    description: "Projetadas para auxiliar o foco em uma única distância principal, geralmente para longe. O uso de óculos para leitura pode continuar sendo necessário.",
+    features: ["Foco principal para longe", "Tecnologia asférica", "Proteção UV"]
   },
   {
     title: "Lentes Multifocais",
-    description: "Permitem visão clara em múltiplas distâncias, eliminando a necessidade de óculos para longe e perto. São ideais para leitura e atividades gerais.",
-    features: ["Independência de óculos", "Foco perto e longe", "Maior liberdade"]
+    description: "Projetadas para oferecer pontos de foco em múltiplas distâncias (perto e longe), podendo reduzir a necessidade de óculos conforme avaliação médica.",
+    features: ["Foco para perto e longe", "Indicação individualizada", "Avaliação pré-operatória"]
   },
   {
     title: "Lentes Trifocais",
-    description: "Oferecem três zonas de foco: perto, intermediário e longe. Garantem transição suave entre diferentes distâncias, sendo ideais para computador.",
-    features: ["Visão intermediária otimizada", "Conforto digital", "Performance superior"]
+    description: "Desenvolvidas com três zonas de foco (perto, intermediário e longe), visando auxiliar a transição visual entre diferentes distâncias no dia a dia.",
+    features: ["Foco intermediário", "Uso em telas e leitura", "Avaliação especializada"]
   },
   {
     title: "Lentes EDOF",
-    description: "Foco Estendido. Proporcionam visão nítida em uma faixa contínua de distâncias. Reduzem halos noturnos, oferecendo mais conforto visual.",
-    features: ["Menos halos e glare", "Contraste aprimorado", "Transição natural"]
+    description: "Foco Estendido. Projetadas para ampliar a faixa contínua de foco, buscando proporcionar conforto visual entre distâncias intermediárias e de longe.",
+    features: ["Foco contínuo estendido", "Contraste equilibrado", "Indicação clínica"]
   }
 ];
 

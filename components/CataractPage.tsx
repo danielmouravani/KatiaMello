@@ -9,11 +9,11 @@ interface CataractPageProps {
 const FAQ_ITEMS = [
   {
     question: "A cirurgia de catarata dói?",
-    answer: "Não. O procedimento é realizado com anestesia local (colírios e sedação leve), sendo totalmente indolor durante a execução. O desconforto pós-operatório é mínimo."
+    answer: "O procedimento é realizado com anestesia local (colírios e sedação leve) para proporcionar maior conforto, sendo geralmente bem tolerado durante a execução. Eventual desconforto no pós-operatório costuma ser leve e varia conforme cada paciente."
   },
   {
     question: "Quanto tempo demora a recuperação?",
-    answer: "A recuperação visual é rápida. A maioria dos pacientes nota melhora significativa em 24 a 48 horas. O retorno às atividades leves geralmente ocorre em poucos dias."
+    answer: "O tempo de recuperação visual varia de acordo com as características clínicas de cada paciente e o acompanhamento pós-operatório. Muitos pacientes observam melhora gradual nos primeiros dias, seguindo as orientações médicas."
   },
   {
     question: "Preciso ficar internado?",
@@ -53,11 +53,11 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight">
-                Recupere a Nitidez da Sua Visão e <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-200">Viva Sem Limites.</span>
+                Cirurgia de Catarata com <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-brand-200">Precisão e Cuidado Individualizado.</span>
               </h1>
               
               <p className="text-lg text-slate-300 leading-relaxed max-w-lg">
-                Diga adeus à visão embaçada. A cirurgia de catarata é rápida, indolor e devolve sua qualidade de vida em poucos dias.
+                Procedimento oftalmológico moderno que visa substituir o cristalino opaco por uma lente intraocular. A indicação, técnica e evolução pós-operatória dependem de avaliação médica individualizada.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -189,22 +189,22 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                  <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
                     <Clock className="text-brand-500 shrink-0" size={28} />
                     <div>
-                      <h4 className="font-bold text-slate-900">Rápido</h4>
-                      <p className="text-sm text-slate-500">Procedimento dura entre 15 a 20 minutos.</p>
+                      <h4 className="font-bold text-slate-900">Tempo Cirúrgico</h4>
+                      <p className="text-sm text-slate-500">Procedimento geralmente realizado entre 15 e 20 minutos, podendo variar conforme cada caso.</p>
                     </div>
                  </div>
                  <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
                     <ShieldCheck className="text-brand-500 shrink-0" size={28} />
                     <div>
-                      <h4 className="font-bold text-slate-900">Seguro</h4>
-                      <p className="text-sm text-slate-500">Altíssimas taxas de sucesso e segurança.</p>
+                      <h4 className="font-bold text-slate-900">Protocolos de Segurança</h4>
+                      <p className="text-sm text-slate-500">Realizada seguindo rigorosos protocolos clínicos e critérios de segurança cirúrgica.</p>
                     </div>
                  </div>
                  <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
                     <Eye className="text-brand-500 shrink-0" size={28} />
                     <div>
-                      <h4 className="font-bold text-slate-900">Sem Dependência</h4>
-                      <p className="text-sm text-slate-500">Possibilidade de reduzir ou eliminar o uso de óculos.</p>
+                      <h4 className="font-bold text-slate-900">Lentes Intraoculares</h4>
+                      <p className="text-sm text-slate-500">Diferentes opções de lentes podem ser avaliadas pelo oftalmologista conforme o perfil de cada paciente.</p>
                     </div>
                  </div>
                </div>
@@ -224,11 +224,11 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
       <section className="bg-slate-900 text-white py-20">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Escolha Como Quer Enxergar o Mundo
+            Opções de Lentes Intraoculares
           </h2>
           <p className="text-slate-400 max-w-2xl mx-auto">
-            Substituímos seu cristalino opaco por lentes intraoculares de alta tecnologia. 
-            A escolha certa define sua liberdade dos óculos.
+            Na cirurgia de catarata, o cristalino opaco é substituído por uma lente intraocular. 
+            A indicação do modelo mais adequado é definida pelo médico após exames pré-operatórios.
           </p>
         </div>
         
@@ -296,7 +296,7 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
             
             <div className="relative z-10 max-w-2xl mx-auto space-y-8">
               <h2 className="text-3xl md:text-5xl font-display font-bold">
-                Não deixe a catarata apagar o brilho da sua vida.
+                Cuide da saúde dos seus olhos com uma avaliação especializada.
               </h2>
               <p className="text-brand-100 text-lg">
                 Agenda aberta para este mês. Aceitamos os principais convênios.
@@ -308,10 +308,10 @@ const CataractPage: React.FC<CataractPageProps> = ({ onNavigate }) => {
                 className="inline-flex items-center gap-3 bg-white text-brand-700 hover:bg-slate-100 px-8 py-5 rounded-full font-bold text-lg transition-all transform hover:scale-105 shadow-lg"
               >
                 <Phone size={20} className="fill-current" />
-                QUERO AGENDAR AGORA
+                AGENDAR AVALIAÇÃO
               </a>
               <p className="text-xs text-brand-200 opacity-80 mt-4">
-                Atendimento rápido via WhatsApp
+                Atendimento rápido via WhatsApp. Os resultados e a indicação cirúrgica dependem de avaliação médica individual.
               </p>
             </div>
           </div>
