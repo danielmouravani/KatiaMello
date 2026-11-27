@@ -19,7 +19,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SPECIALTIES: Specialty[] = [
   {
     title: "Catarata",
-    description: "Avaliação e cirurgia moderna por facoemulsificação com opções de lentes intraoculares conforme indicação médica.",
+    description: "Planejamento cirúrgico personalizado por facoemulsificação e tecnologias de lentes intraoculares conforme indicação médica.",
     icon: Eye,
     image: "https://picsum.photos/400/300?random=1"
   },
